@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  margin: 50px auto;
+  border-radius: 10px;
+  border: #FFE9EE 5px solid;
+}
+
+main:hover {
+  border: #FF2253 5px solid;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #212529;
+  padding: 10px 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2, a {
+  color: #FF2253;
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 250px;
+  background-color: #F8F9FA;
+  border: #DEE2E6 1.5px solid;
+  color: #868E96;
+}
+
+input:hover {
+  background-color: #E9ECEF;
+  border: #DEE2E6 1.5px solid;
+  color: #868E96;
+}
+
+input:focus {
+  background-color: white;
+  border: #212529 1.5px solid;
+  color: #212529;
+}
+
+p {
+  color: #212529;
+  font-size: 12px;
+  margin: 5px;
+}
+
+#btnLogin {
+  background-color: #F8F9FA;
+  border: #F8F9FA 1.5px solid;
+  color: #212529;
+  width: 70%;
+  max-width: 200px;
+  margin-bottom: 40px;
+}
+
+#btnLogin:active {
+  background-color: #FF2253;
+  border: #FF2253 1.5px solid;
+  color: #F8F9FA;
+}
+
+
+@media (max-width: 300px) {
+  p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #btnLogin:hover {
+    background-color: #FF2253;
+    border: #FF2253 1.5px solid;
+    color: #F8F9FA;
+  }
+
+  #btnLogin:active {
+    background-color: white;
+    border: #212529 1.5px solid;
+    color: #212529;
+  }
+}
