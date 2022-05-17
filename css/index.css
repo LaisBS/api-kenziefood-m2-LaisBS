@@ -100,7 +100,7 @@ ul{
     top: 90px;
     display: flex;
 }
-.li{
+li{
     display: inline;
     text-decoration: none;
     height: 400px;
@@ -111,12 +111,12 @@ ul{
     font-family:'Poppins', sans-serif ;
     margin-left: 18px;
   }
-.li .photo{
+li .photo{
     width:300px;
     height: 200px;
 }
 
-.h3{
+h3{
     font-style: normal;
     font-weight: 500;
     font-size: 16px; 
@@ -124,7 +124,7 @@ ul{
     margin-top: 24px;
     color:black;
 }
-.li,p,span{
+li,p,span{
     color: #868E96;
     font-style: normal;
     font-weight: 400;
@@ -139,7 +139,7 @@ li p{
     overflow: hidden;
     text-overflow: ellipsis; 
 }
-.price{
+.cart_price p{
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -184,7 +184,7 @@ li p{
 .cartIcon:hover{
     filter: invert(37%) sepia(94%) saturate(2033%) hue-rotate(139deg) brightness(98%) contrast(91%);
 } 
-#cart_price{
+.cart_price{
     display: flex;
     padding: 10px;
     justify-content:space-between;
@@ -201,6 +201,9 @@ li p{
     align-items: center;
     width: 40px;
     height: 40px;
+    z-index: -1;
+    position: relative;
+    left:40%;
 }
 .purchaseButton:hover{
     filter: invert(93%) sepia(22%) saturate(103%) hue-rotate(101deg) brightness(98%) contrast(98%);
@@ -241,7 +244,7 @@ li p{
         overflow: visible;
         width: auto ;
     }
-    .li{
+    li{
         margin-top: 53px;
         max-width: 300px;
     }
