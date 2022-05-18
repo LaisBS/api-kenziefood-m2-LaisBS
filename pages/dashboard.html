@@ -25,10 +25,34 @@
     <button class="fruits">Frutas</button>
     <button class="drink">Bebidas</button>
     <div class="add">
-      <button id="modalAddProduct" class="addNewProduct">Adicionar novo produto</button>
-      <div class="backgroundModalStyle">
+      <button id="modalAddProduct" class="addNewProduct" onclick="openModal()">Adicionar novo produto</button>
+      <div class="backgroundModalStyle" id="modalProduct">
         <div class="modalAddProduct">
-
+          <t class="registerProduct">Cadastro de Produto</t>
+          <span class="span" onclick="closeModal()">x</span>
+          <h5 class="newProduct">Nome do Produto</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeHolder="Digitar o nome" class="inputProduct">
+          </form>
+          <h5 class="newProduct">Descrição</h5>
+          <form class="modalFormDescription" action="">
+            <input type="text" placeholder="Digitar a descrição" class="inputProduct">
+          </form>
+          <div class="categories">
+          <h5 class="newProduct">Categorias</h5>
+          <button class="modalBread">Panificadora</button>
+          <button class="modalFruits">Frutas</button>
+          <button class="modalDrinks">Bebidas</button>
+          </div>
+          <h5 class="newProduct">Valor do Produto</h5>
+          <form class="modalFormPrice" action="">
+            <input type="text" placeholder="Digitar o valor aqui" class="inputProduct">
+          </form>
+          <h5 class="newProduct">Link da imagem</h5>
+          <form class="modalFormImg" action="">
+            <input type="text" placeholder="Inserir link" class="inputProduct">
+          </form>
+          <button class="acceptProduct">Cadastrar produto</button>
         </div>
       </div>
     </div>
@@ -45,9 +69,46 @@
        <p class="paragraph1">Bebidas</p>
        <!--<p class="paragraph2">Frutas</p> -->
        <p class="paragraph3">Esta receita serve muito bem...</p>
-       <div class="buttons">
-         <button id="btnEdit" class="edit">E</button>
-         <button id="btnDelete" class="delete">D</button>
+
+         <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
+         <div class="backgroundModalStyle">
+           <div class="modalEditProduct">
+            <t class="registerProduct">Edição de Produto</t>
+            <span class="span" onclick="closeModal()">x</span>
+            <h5 class="newProduct">Nome do Produto</h5>
+            <form class="modalForm" action="">
+              <input type="text" placeHolder="Digitar o nome" class="inputProduct">
+            </form>
+            <h5 class="newProduct">Descrição</h5>
+            <form class="modalFormDescription" action="">
+              <input type="text" placeholder="Digitar a descrição" class="inputProduct">
+            </form>
+            <div class="categories">
+            <h5 class="newProduct">Categorias</h5>
+            <button class="modalBread">Panificadora</button>
+            <button class="modalFruits">Frutas</button>
+            <button class="modalDrinks">Bebidas</button>
+            </div>
+            <h5 class="newProduct">Valor do Produto</h5>
+            <form class="modalFormPrice" action="">
+              <input type="text" placeholder="Digitar o valor aqui" class="inputProduct">
+            </form>
+            <h5 class="newProduct">Link da imagem</h5>
+            <form class="modalFormImg" action="">
+              <input type="text" placeholder="Inserir link" class="inputProduct">
+            </form>
+            <button class="deleteChanges">Excluir</button>
+            <button class="saveChanges">Salvar alterações</button>
+           </div>
+         </div>
+         <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+         <div class="backgroundModalStyle">
+          <div class="modalDeleteProduct">
+            <t class="registerProduct">Exclusão de produto</t>
+          <span class="span" onclick="closeModal()">x</span>
+          <h5 class="deleteProduct">Tem certeza que deseja excluir este produto?</h5>
+          <button class="deleteYes">Sim</button>
+          <button class="deleteNo">Não</button>
        </div>
      </div>
      <div class="product">
