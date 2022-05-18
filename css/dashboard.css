@@ -82,7 +82,7 @@ button {
   font-size: 10px;
   color: white;
 }
-.backgroundModalStyle {
+.addProductBackgroundModalStyle {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -92,6 +92,27 @@ button {
   left: 0;
   display: none;
 }
+.editProductBackgroundModalStyle {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.deleteProductBackgroundModalStyle {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
 .modalAddProduct {
   width: 70%;
   height: 70%;
@@ -100,6 +121,96 @@ button {
   margin: 90px auto 0 auto;
   transition: 350ms;
   top: -100%;
+}
+.modalEditProduct {
+  width: 70%;
+  height: 70%;
+  background: #FFFFFF;
+  border-radius: 8px 8px 8px 8px;
+  margin: 90px auto 0 auto;
+  transition: 350ms;
+  top: -100%;
+}
+.modalDeleteProduct {
+  width: 70%;
+  height: 30%;
+  background: #FFFFFF;
+  border-radius: 8px 8px 8px 8px;
+  margin: 90px auto 0 auto;
+  transition: 350ms;
+  top: -100%;
+}
+.modalForm {
+  padding-left: 5px;
+}
+.registerProduct {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 11px;
+}
+.newProduct {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 8px;
+}
+.cadastrarProduto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+}
+.acceptProduct {
+  color: white;
+  background: #FF2253;
+  border: 1.5px solid #FF2253;
+  border-radius: 32px;
+  width: 210px;
+  height: 25px;
+}
+.registerProduct {
+  padding: 8px;
+}
+.deleteProduct {
+  font-family: 'Poppins';
+  font-style: normal;
+  padding: 12px;
+  right: 65%;
+}
+.confirmDelete {
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 12px;
+  background: #F8F9FA;
+  border: 1.5px solid #F8F9FA;
+  border-radius: 32px;
+  padding: 10px;
+}
+.changes {
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 12px;
+  background: #F8F9FA;
+  border: 1.5px solid #F8F9FA;
+  border-radius: 32px;
+}
+.inputProduct {
+  background-color: #DEE2E6;
+  border-radius: 10px;
+  width: 200px;
+  height: 25px;
+  padding-left: 13px;
+}
+.categoriesProducts {
+  background: #F8F9FA;
+  border: 1.5px solid #F8F9FA;
+  border-radius: 32px;
+  color: #868E96;
+  padding: 5px;
 }
 .span {
   float: right;
@@ -163,8 +274,8 @@ button {
 .product {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   padding: 5%;
   border: 1px solid #E9ECEF;
   border-radius: 12px;
@@ -175,7 +286,8 @@ button {
   font-style: normal;
   font-weight: 500;
   color: #212529;
-  font-size: 11px;
+  font-size: 10px;
+
 }
 .paragraph1 {
   font-family: 'Poppins', sans-serif;
@@ -204,6 +316,7 @@ button {
 }
 
 .edit {
+  color: #868E96;
   width: 13px;
   height: 13px;
   display: flex;
@@ -212,6 +325,7 @@ button {
   font-size: 9px;
 }
 .delete {
+  color: #868E96;
   width: 13px;
   height: 13px;
   display: flex;
@@ -227,7 +341,7 @@ button {
   align-items: center;
   float: right;
   position: absolute;
-  top: 102%;
+  top: 94%;
   left: 60%;
   padding-top: 2px;
   background: #F8F9FA;
@@ -235,7 +349,7 @@ button {
   width: 100px;
   height: 30px;
   padding-right: 5px;
-  bottom: 15px;
+  bottom: 25px;
 }
 .mensage {
   background: #FFFFFF;
@@ -264,7 +378,7 @@ button {
     align-items: center;
     position: absolute;
     right: 68px;
-    top: 560px;
+    top: 100%;
 
 }
 /* Style para dispositivo com tamanho acima de 768px  */
@@ -460,4 +574,135 @@ button {
     left: 1400px;
     top: 235%;
   }
+  /* Style modal add produto */
+  .addProductBackgroundModalStyle {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .modalAddProduct {
+    display: block;
+    width: 20%;
+    height: 80%;
+    background: #FFFFFF;
+    border-radius: 8px 8px 8px 8px;
+    margin: 90px auto 0 auto;
+    transition: 350ms;
+    top: -100%;
+    padding-top: 7px;
+  }
+  .registerProduct {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E9ECEF;
+    border-radius: 4px;
+    width: 25px;
+    height: 25px;
+  }
+  .newProduct {
+    font-size: 14px;
+    padding-top: 30px;
+  }
+  .inputProduct {
+    width:420px;
+    height: 60px;
+    background: #F8F9FA;
+  }
+  .categoriesProducts {
+    gap: 105px;
+    width: 100px;
+    height: 35px;
+  }
+  .categoriesAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+  .cadastrarProduto {
+    padding: 25px;
+    gap: 70px;
+  }
+  .acceptProduct {
+    width: 350px;
+    height: 50px;
+  }
+  /* Style modal editar produto */
+  .editProductBackgroundModalStyle {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .modalEditProduct {
+    display: block;
+    width: 23%;
+    height: 85%;
+    background: #FFFFFF;
+    border-radius: 8px 8px 8px 8px;
+    margin: 90px auto 0 auto;
+    transition: 350ms;
+    top: -100%;
+    padding-top: 10px;
+    padding-left: 5px;
+  }
+  .changes {
+    width: 150px;
+    height: 50px;
+  }
+  .cadastrarProduto {
+    gap: 30px;
+  }
+  /* Style modal deletar produto */
+  .deleteProductBackgroundModalStyle {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .modalDeleteProduct {
+    display: block;
+    width: 20%;
+    height: 30%;
+    background: #FFFFFF;
+    border-radius: 8px 8px 8px 8px;
+    margin: 90px auto 0 auto;
+    transition: 350ms;
+    top: -100%;
+    padding-top: 10px;
+    padding-left: 5px;
+  }
+  .deleteProduct {
+    padding: 40px;
+    font-size: 14px;
+  }
+  .cadastrarProduto {
+    gap: 70px;
+  }
+  .confirmDelete {
+    color: #868E96;
+    width: 150px;
+    height: 60px;
+  }
+
  }
