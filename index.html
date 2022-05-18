@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Kenzie</h1>
+            <h2>Food</h2>
+        </div>
+        
+        <img src="images\pequisar.png" id="search-icon">
+        <input type="text" id="search" placeholder="Pesquisar por produto">
+    </header>
+
+    <div id="top">
+        <button id="All">Todos</button>
+        <img src="images\bread-icon.jpg">
+        <button id="Bakery">Panificadora</button>
+        <img src="images\Icon_fruit.png">
+        <button id="Fruits">Frutas</button>
+        <img src="images\red-wine-cartoon.jpg">
+        <button id="Drinks">Bebidas</button>
+    </div>
+
+     <main>
+        <ul id="list-products">
+           
+        </ul>
+    </main>
+
+    <aside >
+        <section class="purchaseCart">
+            <div id="tile-car">
+                <img src=" images\cart_white.svg">  </i>
+                <h4>Carrinho</h4>
+            </div>
+
+            <div id="caixa-carrinho">
+                <section id="container-create-car-itens">
+                    <div id="empty-cart">
+                        <img src="images/bag.png">  
+                        <small id="add">Por enquanto não temos produtos no carrinho</small>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </aside>
+    <script type="module"src="./scripts/index.js"></script>
+    <script type="module"src="./scripts/models/showcase.js"></script>
+    
+</body>
+</html>
