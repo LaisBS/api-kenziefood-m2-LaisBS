@@ -1,0 +1,7 @@
+localStorage.setItem("Token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg1N2ZlMmM0LThhZDUtNGI3Zi05YTJhLTA5Zjg5MDc3Zjk3MiIsImlhdCI6MTY1Mjg5OTg4NywiZXhwIjoxNjUzNzYzODg3LCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.zk-hMT3jtH7w9BzIEKoZqZEoPkjK_RluYtwcEMZTvck")
+
+import ProductsController from "/scripts/controllers/products-controller.js"
+
+let response=await ProductsController.getPrivateProducts()
+
+console.log(response)
