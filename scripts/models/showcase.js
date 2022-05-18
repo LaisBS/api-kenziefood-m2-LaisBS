@@ -1,8 +1,8 @@
 import ProductsController from "/scripts/controllers/products-controller.js"
 
 const response = await ProductsController.getPublicProducts();
-class createList{
-    static list(){
+class createList {
+    static list() {
         const ul=document.getElementById("list-products");
 
         response.forEach(product => {
@@ -35,7 +35,7 @@ class createList{
             li.appendChild(p);
             li.appendChild(span);
             li.appendChild(div);
-            
+
             ul.appendChild(li);
         });
     }
