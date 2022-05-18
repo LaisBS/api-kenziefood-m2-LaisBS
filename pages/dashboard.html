@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="reset" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
@@ -13,8 +13,10 @@
     <h1 class="h1">Kenzie</h1>
     <h2 class="h2">Food</h2>
     <div class="containerSearch">
-      <input type="text" placeHolder="Pesquisar por produto" class="searchProduct">
-      <img class="userUrl" src="" alt="Foto perfil">
+      <form class="form" action="">
+        <input type="text" placeHolder="Pesquisar por produto" class="searchProduct">
+      </form>
+        <img class="userUrl" src="" alt="Foto perfil">
     </div>
   </header>
   <section class="filterButtons">
@@ -22,8 +24,15 @@
     <button class="bread">Panificadora</button>
     <button class="fruits">Frutas</button>
     <button class="drink">Bebidas</button>
-  </section>
-   <button class="addNewProduct">Adicionar novo produto</button>
+    <div class="add">
+      <button id="modalAddProduct" class="addNewProduct">Adicionar novo produto</button>
+      <div class="backgroundModalStyle">
+        <div class="modalAddProduct">
+
+        </div>
+      </div>
+    </div>
+    </section>
    <div class="subTitle">
      <h3>Produto</h3>
      <h3>Categorias</h3>
@@ -31,50 +40,62 @@
      <h3>Ações</h3>
    </div>
    <main>
-     <div class="firstProduct">
+     <div class="product">
        <h3 class="h3">Panqueca de banana com aveia</h3>
        <p class="paragraph1">Bebidas</p>
-       <p class="paragraph2">Frutas</p>
-       <p class="paragraph3">Esta receita serve muito bem 2 pessoas.</p>
-       <button class="editFirst">E</button>
-       <button classs="deleteFirst">D</button>
+       <!--<p class="paragraph2">Frutas</p> -->
+       <p class="paragraph3">Esta receita serve muito bem...</p>
+       <div class="buttons">
+         <button id="btnEdit" class="edit">E</button>
+         <button id="btnDelete" class="delete">D</button>
+       </div>
      </div>
-     <div class="secondProduct">
+     <div class="product">
        <h3 class="h3">Mousse de morango com a fruta</h3>
        <p class="paragraph1">Bebidas</p>
-       <p class="paragraph3">Sobremesa fácil, rápida e muito saboros...</p>
-       <button class="editSecond">E</button>
-       <button classs="deleteSecond">D</button>
+       <p class="paragraph3">Sobremesa fácil, rápida e muito...</p>
+       <div class="buttons">
+         <button id="btnEdit" class="edit">E</button>
+         <button id="btnDelete" class="delete">D</button>
+       </div>
      </div>
-     <div class="thirdProduct">
+     <div class="product">
        <h3 class="h3">Pastel de verdura vegano</h3>
        <p class="paragraph1">Bebidas</p>
        <p class="paragraph3">Todos nós fervemos vegetais, salteamos</p>
-       <button class="editThird">E</button>
-       <button classs="deleteThid">D</button>
+       <div class="buttons">
+         <button id="btnEdit" class="edit">E</button>
+         <button id="btnDelete" class="delete">D</button>
+       </div>
      </div>
-     <div class="fourthProduct">
+     <div class="product">
        <h3 class="h3">Pizza vegetariana de palmito</h3>
        <p class="paragraph1">Bebidas</p>
        <p class="paragraph3">Esse é um dos sabores de pizza mais...</p>
-       <button class="editFourth">E</button>
-       <button classs="deleteFourth">D</button>
+       <div class="buttons">
+         <button id="btnEdit" class="edit">E</button>
+         <button id="btnDelete" class="delete">D</button>
+       </div>
      </div>
-     <div class="fifthProduct">
+     <div class="product">
        <h3 class="h3">Laranja Pera Fresca 5kg</h3>
        <p class="paragraph1">Frutas</p>
-       <p classs="paragraph3">O vinho é rico em compostos nutrício...</p>
-       <button class="editFifth">E</button>
-       <button classs="deleteFifth">D</button>
-     </div>
+       <p class="paragraph3">O vinho é rico em compostos nutrício...</p>
+       <div class="buttons">
+         <button id="btnEdit" class="edit">E</button>
+         <button id="btnDelete" class="delete">D</button>
+       </div>
+      </div>
    </main>
    <footer class="footer">
      <div class="status">
-       <t>Status</t>
-       <button class="close">X</button>
-       <p class="footerParagraph">Mensagem</p>
-     </div>
-   </footer>
+       <t class="mensage">Status</t>
+       <div>
+         <button class="close" class="close">X</button>
+        </div>
+      </div>
+      <p class="footerParagraph">Mensagem</p>
+    </footer>
   <script type="module" src="../scripts/dashboard.js"></script>
 </body>
 </html>
