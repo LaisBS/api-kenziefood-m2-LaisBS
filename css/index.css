@@ -24,7 +24,7 @@ h2{
     width: 122px;
     display: flex;
 }
-#searchIcon{
+#search-icon{
     width: 20px;
     height: 20px;
     position:relative;
@@ -32,7 +32,7 @@ h2{
     top:70px;
     z-index: 1;
 }
-#Search{
+#search{
     width: 342px;
     height: 49px;
     font-size: 16px;
@@ -74,7 +74,7 @@ h2{
     font-weight: 500;
     font-size: 16px;
 }
-#bakery, #Fruits, #Drinks{
+#Bakery, #Fruits, #Drinks{
     background-color: #FFF7F4;
     width: 170px;
     height: 48px;
@@ -95,7 +95,7 @@ main{
     height: 1000px;
     
 }
-ul{
+#list-products{
     position: relative;
     top: 90px;
     display: flex;
@@ -163,15 +163,15 @@ li p{
     text-align: center
 
 }
-#tileCar{
+#tile-car{
     font-family:'Poppins', sans-serif;
     color: white;
     font-style: normal;
     font-weight: 700;
     font-size: 17.1px;
 }
-#text{
-    font-size: 0;  
+#empty-cart{
+    display: none; 
 }
 .cartIcon{
     z-index: 1;
@@ -210,7 +210,7 @@ li p{
 }
 
 @media only screen and (min-width: 900px) {
-    ul{
+    #list-products{
         display: flex;
         flex-wrap: wrap;
     }
@@ -229,7 +229,7 @@ li p{
         top:15px;
         left:55%;
     }
-    #searchIcon{
+    #search-icon{
         left: 57%;
         top: 29px;
     }
@@ -264,7 +264,7 @@ li p{
         border-radius: 12px 12px 0px 0px;
     }
 
-    #tileCar{
+    #tile-car{
         display:flex;
         color: #FFFFFF;
         justify-content: center;
@@ -276,7 +276,7 @@ li p{
         margin-top:10px;
         margin-bottom: 10px;
       }
-      #caixaCarrinho{
+      #caixa-carrinho{
         display: flex;
         color: #868E96;
         background-color: #F8F9FA;
@@ -288,7 +288,7 @@ li p{
         flex-direction: column;
         overflow: auto;
       }
-      #text{
+      #empty-cart{
           width: 243px;
           font-family:'Poppins', sans-serif;
           font-style: normal;
@@ -298,7 +298,7 @@ li p{
             flex-direction: column;
             align-items: center;
       }
-      #text img{
+      #empty-cart img{
           width:80px;
           height:80px;
       }

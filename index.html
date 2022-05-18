@@ -12,41 +12,45 @@
 <body>
     <header>
         <div id="title">
-            <h1>Kenzie</h1><h2>Food</h2>
+            <h1>Kenzie</h1>
+            <h2>Food</h2>
         </div>
         
-        <img src="images\pequisar.png" id="searchIcon">
-        <input type="text" id="Search" placeholder="Pesquisar por produto">
+        <img src="images\pequisar.png" id="search-icon">
+        <input type="text" id="search" placeholder="Pesquisar por produto">
     </header>
+
     <div id="top">
         <button id="All">Todos</button>
         <img src="images\bread-icon.jpg">
-        <button id="bakery">Panificadora</button>
+        <button id="Bakery">Panificadora</button>
         <img src="images\Icon_fruit.png">
         <button id="Fruits">Frutas</button>
         <img src="images\red-wine-cartoon.jpg">
         <button id="Drinks">Bebidas</button>
     </div>
+
      <main>
-        <ul id="ul">
+        <ul id="list-products">
            
         </ul>
     </main>
-    <aside >
-      
-        
-        <section class="purchaseCart">
-            <div id="tileCar"><img src=" images\cart_white.svg">  </i><h4> Carrinho</h4></div>
-            <div id="caixaCarrinho">
 
-            <section id="container-create-carItens">
-                <div id="text">
-                    <img src="images/bag.png">  
-                    <small id="add">Por enquanto não temos produtos no carrinho</small>
-                </div>
-            </section>
-                
-        </div>
+    <aside >
+        <section class="purchaseCart">
+            <div id="tile-car">
+                <img src=" images\cart_white.svg">  </i>
+                <h4>Carrinho</h4>
+            </div>
+
+            <div id="caixa-carrinho">
+                <section id="container-create-car-itens">
+                    <div id="empty-cart">
+                        <img src="images/bag.png">  
+                        <small id="add">Por enquanto não temos produtos no carrinho</small>
+                    </div>
+                </section>
+            </div>
         </section>
     </aside>
     <script type="module"src="./scripts/index.js"></script>
