@@ -71,15 +71,35 @@ function handleClickCard(event){
 function createCarItens(imagem,nome,categoria,preco){
         let cartItem=document.createElement("li")
         cartItem.setAttribute("class","carItem")
-        cartItem.innerHTML=`
-        <img class=carPhoto src=${imagem}>
-        <div class="info">
-        <h3>${nome}</h3>
-        <caption class="category">${categoria}</caption>
-        <p class="price"> R$ ${preco}</p>
-        <div>
-        <img class="trash"src="images/trash.png"> 
-    </div>`;
+        const img=document.createElement("img")
+        img.classList.add("carPhoto")
+        const div=document.createElement("div")
+        div.classList.add("info")
+        const h3=document.createElement("h3")
+        const caption=document.createElement("caption")
+        caption.classList.add("category")
+        const p=document.createElement("p")
+        p.classList.add("price")
+        const trash=document.createElement("img")
+        trash.classList.add("trash")
+       
+        img.src=imagem
+        h3.innerText=nome
+        caption.innerText=categoria
+        p.innerText=`R$ ${preco}`
+        trash.src="images/trash.svg"
+        trash.addEventListener("click",event=>{
+            deleteItem(event)
+        })
+        
+        div.appendChild(h3)
+        div.appendChild(caption)
+        div.appendChild(p)
+
+        cartItem.appendChild(img)
+        cartItem.appendChild(div)
+        cartItem.appendChild(trash)
+    
     cartItens.appendChild(cartItem)
 
     let plus=document.getElementById("plus")
@@ -90,10 +110,9 @@ function createCarItens(imagem,nome,categoria,preco){
     let qtd=document.getElementById("qtd")
     let valorQtd=qtd.textContent
     qtd.textContent=Number(valorQtd)+1
-
     }
-    const cart=document.getElementById("boxCart")
-    cart.addEventListener("click",deleteItem)
+    
+    
     function deleteItem(event){
     const clickedElement=event.target.closest("li")
     if(clickedElement){
