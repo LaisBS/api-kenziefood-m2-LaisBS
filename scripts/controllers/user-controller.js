@@ -26,8 +26,13 @@ class UserController {
       },
       body: JSON.stringify(userData)
     })
-    .then((response) => {
-      localStorage.setItem("Token", response.json());
+    .then(async (response) => {
+      if (response.status === 200) {
+        const token = await response.json();
+        console.log(token);
+        localStorage.setItem("Token", token);
+        window.location = '../../index.html'
+      }
       return response.status;
     })
     .catch((error) => {
@@ -35,3 +40,5 @@ class UserController {
     });
   }
 }
+
+export default UserController

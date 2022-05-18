@@ -5,7 +5,7 @@ class ProductsController {
   static async getPublicProducts() {
     return await fetch("https://api-kenzie-food.herokuapp.com/products/", {
       method: "GET",
-      method: {
+      headers: {
         "Content-Type": "application/json"
       }
     })
@@ -20,7 +20,7 @@ class ProductsController {
   static async getPrivateProducts() {
     return await fetch(this.BASE_URL, {
       method: "GET",
-      method: {
+      headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${this.token}`
       }
@@ -36,7 +36,7 @@ class ProductsController {
   static async createProduct(productData) {
     return await fetch(this.BASE_URL+"products", {
       method: "POST",
-      method: {
+      headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${this.token}`
       },
@@ -53,7 +53,7 @@ class ProductsController {
   static async changeProduct(productData) {
     return await fetch(this.BASE_URL+"products", {
       method: "PATCH",
-      method: {
+      headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${this.token}`
       },
@@ -70,7 +70,7 @@ class ProductsController {
   static async removeProduct(productId) {
     return await fetch(this.BASE_URL+productId, {
       method: "POST",
-      method: {
+      headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${this.token}`
       }
@@ -83,3 +83,5 @@ class ProductsController {
     });
   }
 }
+
+export default ProductsController
