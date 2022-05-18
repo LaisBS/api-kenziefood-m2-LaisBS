@@ -100,7 +100,7 @@ ul{
     top: 90px;
     display: flex;
 }
-li{
+.preview-product{
     display: inline;
     text-decoration: none;
     height: 400px;
@@ -111,7 +111,7 @@ li{
     font-family:'Poppins', sans-serif ;
     margin-left: 18px;
   }
-li .photo{
+.preview-product .photo{
     width:300px;
     height: 200px;
 }
@@ -124,7 +124,7 @@ h3{
     margin-top: 24px;
     color:black;
 }
-li,p,span{
+.preview-product,p,span{
     color: #868E96;
     font-style: normal;
     font-weight: 400;
@@ -153,26 +153,8 @@ li p{
     left: 75%;
     top: 90%;
 }
-.purchaseCart{
-    background-color: #FF2253;
-    width: 374px;
-    height: 60px;
-    position: absolute;
-    right: 0%;
-    top: 100%;
-    text-align: center
 
-}
-#tileCar{
-    font-family:'Poppins', sans-serif;
-    color: white;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17.1px;
-}
-#text{
-    font-size: 0;  
-}
+
 .cartIcon{
     z-index: 1;
     width: 20px;
@@ -207,6 +189,144 @@ li p{
 }
 .purchaseButton:hover{
     filter: invert(93%) sepia(22%) saturate(103%) hue-rotate(101deg) brightness(98%) contrast(98%);
+}
+/* ___________________________________________________________________________________________ */
+
+.purchaseCart{
+    background-color: #FF2253;
+    width: 374px;
+    height: 60px;
+    position: absolute;
+    bottom:-10%;
+    text-align: center
+
+}
+#text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    color: #868E96;
+    font-family:'Poppins', sans-serif;
+}
+#bag{
+    width: 60px;
+    height: 60px;
+}
+#container-create-carItens{
+    width: 350px;
+    height: 400px;
+}
+#tileCar{
+    font-family:'Poppins', sans-serif;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17.1px;
+}
+.carItem{
+    width: 300px;
+    height: 83px;
+    display: flex;
+    flex-direction: row;
+}
+.carPhoto{
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap:5px;
+    height: 83px;
+    
+}
+#cartItens{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.carItem h3{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color:#000000;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+    width:176px; 
+}
+.category{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0;
+}
+.price{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color:#212529;
+    margin: 0;
+}
+.trash{
+    position: relative;
+    z-index:1;
+    left:200px;
+    bottom: 55px;
+}
+.hidden{
+    display: none;
+}
+
+#boxCart{
+    width: 350px;
+    height: 400px;
+    align-items: center;
+    display: flex; 
+    justify-content: center; 
+    overflow:scroll;
+    flex-direction: column;
+     justify-content: flex-start; 
+    
+}
+/* ___________________________________________________ */
+#container-purchase{
+    display: flex;
+    width: 319px;
+    height: 58px;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    bottom: 0%;
+}
+#container-purchase p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color:#000000;
+}
+#Quanti{
+    display: flex;
+    width: 365px;
+    height: 58px;
+    justify-content: space-between;
+}
+#Price{
+    display: flex;
+    width: 365px;
+    height: 58px;
+    justify-content: space-between;
+}
+#RS{
+    position: absolute;
+    left: 330px;
 }
 
 @media only screen and (min-width: 900px) {
@@ -244,7 +364,7 @@ li p{
         overflow: visible;
         width: auto ;
     }
-    li{
+    .preview-product{
         margin-top: 53px;
         max-width: 300px;
     }
@@ -275,18 +395,10 @@ li p{
         align-items: center;
         margin-top:10px;
         margin-bottom: 10px;
+       
       }
-      #caixaCarrinho{
-        display: flex;
-        color: #868E96;
-        background-color: #F8F9FA;
-        justify-content: center;
-        width: 347px;
-        height:400px;
-        min-height: 400px;
-        align-items: center;
-        flex-direction: column;
-        overflow: auto;
+      #tileCar h4{
+        margin-left:5px
       }
       #text{
           width: 243px;
@@ -297,9 +409,52 @@ li p{
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-left: 50px;
       }
       #text img{
           width:80px;
           height:80px;
       }
-  } 
+      #container-purchase{
+        display: flex;
+        width: 319px;
+        height: 58px;
+        position: relative;
+        top:510px;
+        z-index: 1;
+        flex-direction: column;
+    }
+    #container-purchase p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color:#000000;
+    }
+    #Quanti{
+        display: flex;
+        width: 319px;
+        height: 58px;
+        justify-content: space-between;
+    }
+    #Price{
+        display: flex;
+        width: 319px;
+        height: 58px;
+        justify-content: space-between;
+    }  
+        #boxCart{
+            width: 370px;
+            height: 370px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            overflow:scroll;
+            justify-content: flex-start;
+            
+        }
+        #RS{
+            position: absolute;
+            left: 280px;
+        }
+  }
