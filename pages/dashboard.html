@@ -42,11 +42,11 @@
 
 
       <!-- Modal botão adicionar novo produto produto-->
-      <button id="modalAddProduct" class="addNewProduct" onclick="openModalAddProduct()">Adicionar novo produto</button>
-      <div class="addProductBackgroundModalStyle" id="modalProduct">
+      <button id="modalAddProduct" class="addNewProduct">Adicionar novo produto</button>
+      <div id="addModal" class="addProductBackgroundModalStyle">
         <div class="modalAddProduct">
           <t class="registerProduct">Cadastro de Produto</t>
-          <span class="span" onclick="closeModal()">x</span>
+          <span id="closeAddModal" class="span">x</span>
           <h5 class="newProduct">Nome do Produto</h5>
           <form class="modalForm" action="">
             <input type="text" placeHolder="Digitar o nome" class="inputProduct">
@@ -78,6 +78,7 @@
       </div>
     </div>
     <!-- Término botão adicionar novo produto produto-->
+
     </section>
    <div class="subTitle">
      <h3>Produto</h3>
@@ -94,13 +95,18 @@
 
           <p class="paragraph3">Esta receita serve muito bem duas pe...</p>
           <div class="buttons">
+            <button id="modalEditProduct" class="edit">E</button>
+            <button id="modalDeleteProduct" class="delete">D</button>
+          </li>
+
+
+
             <!-- Modal botão editar produto-->
 
-            <button id="modalEditProduct" class="edit" onclick="openModalEditProduct()">E</button>
-            <div class="editProductBackgroundModalStyle">
+            <div id="editModal" class="editProductBackgroundModalStyle">
               <div class="modalEditProduct">
                <t class="registerProduct">Edição de Produto</t>
-               <span class="span" onclick="closeModal()">x</span>
+               <span id="closeEditModal" class="span">x</span>
                <h5 class="newProduct">Nome do Produto</h5>
                <form class="modalForm" action="">
                  <input type="text" placeHolder="Digitar o nome" class="inputProduct">
@@ -108,16 +114,16 @@
                <h5 class="newProduct">Descrição</h5>
                <form class="modalFormDescription" action="">
                  <input type="text" placeholder="Digitar a descrição" class="inputProduct">
-               </form>
-               <div class="categories">
-               <h5 class="newProduct">Categorias</h5>
-               <div class="categoriesAll">
-                 <button class="categoriesProducts">Panificadora</button>
-                 <button class="categoriesProducts">Frutas</button>
-                 <button class="categoriesProducts">Bebidas</button>
-               </div>
-               </div>
-               <h5 class="newProduct">Valor do Produto</h5>
+                </form>
+                <div class="categories">
+                  <h5 class="newProduct">Categorias</h5>
+                  <div class="categoriesAll">
+                    <button class="categoriesProducts">Panificadora</button>
+                    <button class="categoriesProducts">Frutas</button>
+                    <button class="categoriesProducts">Bebidas</button>
+                  </div>
+                </div>
+                <h5 class="newProduct">Valor do Produto</h5>
                <form class="modalFormPrice" action="">
                  <input type="text" placeholder="Digitar o valor aqui" class="inputProduct">
                </form>
@@ -131,12 +137,13 @@
                </div>
               </div>
             </div>
+
             <!-- Modal botão delete produto-->
-            <button id="modalDeleteProduct" class="delete" onclick="openModalDeleteProduct()">D</button>
-            <div class="deleteProductBackgroundModalStyle">
+
+            <div id="deleteModal" class="deleteProductBackgroundModalStyle">
               <div class="modalDeleteProduct">
                 <t class="registerProduct">Exclusão de produto</t>
-                <span class="span" onclick="closeModal()">x</span>
+                <span id="closeDeleteModal" class="span">x</span>
                   <h5 class="deleteProduct">Tem certeza que deseja excluir este produto?</h5>
                   <div class="productChange">
                     <button class="confirmDelete">Sim</button>
@@ -145,15 +152,15 @@
                </div>
                </div>
              </div>
-      </li>
 
+             <!----       término modal delete produto                           --->
       <li class="product">
           <h3 class="h3">Mousse de morango com a fruta</h3>
           <p class="paragraph1">Bebidas</p>
           <p class="paragraph3">Sobremesa fácil, rápida e muito sabor...</p>
           <div class="buttons">
-           <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
-           <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+            <button id="modalEditProduct1" class="edit">E</button>
+            <button id="modalDeleteProduct1" class="delete">D</button>
           </div>
 
       </li>
@@ -162,8 +169,8 @@
         <p class="paragraph1">Panificadora</p>
         <p class="paragraph3">Todos nós fervemos vegetais...</p>
         <div class="buttons">
-          <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
-          <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+          <button id="modalEditProduct2"class="edit">E</button>
+          <button id="modalDeleteProduct2" class="delete">D</button>
         </div>
 
       </li>
@@ -172,8 +179,9 @@
         <p class="paragraph1">Panificadora</p>
         <p class="paragraph3">Esse é um dos sabores de pizza mais...</p>
         <div class="buttons">
-          <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
-           <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+          <button id="modalEditProduct3" class="edit">E</button>
+           <button id="modalDeleteProduct3" class="delete">D</button>
+
         </div>
       </li>
 
@@ -182,8 +190,8 @@
         <p class="paragraph1">Frutas</p>
         <p class="paragraph3">O vinho é rico em compostos nutricio...</p>
         <div class="buttons">
-          <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
-           <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+          <button id="modalEditProduct4" class="edit">E</button>
+           <button id="modalDeleteProduct4" class="delete">D</button>
         </div>
       </li>
      </ul>
