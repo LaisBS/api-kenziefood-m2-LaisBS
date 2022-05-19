@@ -36,7 +36,7 @@ class ShowCase {
       div.appendChild(p_price)
       div.appendChild(button)
       button.setAttribute("class","purchaseButton")
-      div.appendChild(cartIcon)
+      button.appendChild(cartIcon)
       cartIcon.setAttribute("class","cartIcon")
       cartIcon.addEventListener("click", ShowCase.handleClickCard)
 
@@ -107,18 +107,40 @@ class ShowCase {
   }
 
   static generateBtn() {
-    const all=document.getElementById("All")
+    const all=document.getElementsByClassName("All")[0]
     all.addEventListener("click", ShowCase.sectionFilter)
-    const bakery=document.getElementById("bakery")
+    const bakery = document.getElementsByClassName("Bakery")[0]
     bakery.addEventListener("click", ShowCase.sectionFilter)
-    const fruits=document.getElementById("Fruits")
+    const fruits=document.getElementsByClassName("Fruits")[0]
     fruits.addEventListener("click", ShowCase.sectionFilter)
-    const drinks=document.getElementById("Drinks")
+    const drinks=document.getElementsByClassName("Drinks")[0]
     drinks.addEventListener("click", ShowCase.sectionFilter)
 
     const searchField=document.getElementById("Search")
     searchField.addEventListener("keypress", ShowCase.wordSearch)
+
+    const cartOpenBtn = document.getElementById("tileCar");
+    const cartCloseBtn = document.getElementById("cart-close");
+
+    cartOpenBtn.addEventListener("click", () => {
+      ShowCase.showCartMobile(true);
+    });
+
+    cartCloseBtn.addEventListener("click", () => {
+      ShowCase.showCartMobile(false);
+    });
   }
+
+  static showCartMobile(show) {
+    const cartModal = document.getElementById("cart-modal");
+
+    if(show) {
+      cartModal.style.display = "flex"
+    } else {
+      cartModal.style.display = "none"
+    }
+  }
+
 }
 
 export default ShowCase

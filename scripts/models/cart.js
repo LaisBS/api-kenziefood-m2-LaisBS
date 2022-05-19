@@ -8,6 +8,7 @@ class Cart {
     const caption=document.createElement("caption")
     const p=document.createElement("p")
     const trash=document.createElement("img")
+    cartItens.style.display = "flex";
 
     cartItem.setAttribute("class","carItem")
     img.classList.add("carPhoto")
@@ -25,10 +26,10 @@ class Cart {
         Cart.deleteItem(event)
     })
 
-    let plus=document.getElementById("plus")
-    let count=plus.textContent
-    let result=Number(count)+Number(preco)
-    plus.textContent=result
+    const priceTotal =document.getElementById("price-total")
+    let count = priceTotal.textContent
+    let result = Number(count) + Number(preco)
+    priceTotal.textContent = result;
 
     let qtd=document.getElementById("qtd")
     let valorQtd=qtd.textContent
@@ -53,7 +54,7 @@ class Cart {
     if(clickedElement) {
         let priceItem=clickedElement.querySelector(".price").textContent.trim()
         let newPriceItem=priceItem.substr(2)
-        let plus=document.getElementById("plus")
+        const plus = document.getElementById("price-total")
         let count=plus.textContent
         plus.textContent=Number(count)-Number(newPriceItem)
 
