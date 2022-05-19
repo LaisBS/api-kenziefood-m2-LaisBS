@@ -466,8 +466,9 @@ li {
     overflow-x: hidden;
     display: flex;
     justify-content: flex-start;
-    margin-left: 115px;
+    margin-left: 115px; 
     gap:28px;
+    text-align: center;
 
 
 }
@@ -475,7 +476,7 @@ li {
   width: 20px;
   height: 20px;
   position: relative;
-  left: 60px;
+  left: 70px;
 }
   .allProducts {
     background-color: #FF2253;
@@ -488,60 +489,32 @@ li {
     font-size: 16px;
 
   }
-  .bread,.fruits, .drink{
-    background-color: #FFF7F4;
+  .bread,.fruits,.drink{
+    background-color: #FFF1F4;
     width: 170px;
     height: 48px;
-    border: 1.5px solid #FFF7F4;
+    border: 1.5px solid #FFF1F4;
     border-radius: 32px;
-  }
-  #fruits{
-    background: #FFF1F4;
-    font-family: 'Inter';
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
   }
-  #bakery {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    border: none;
+  .bread {
     box-shadow: 0 0 0 0;
     outline: 0;
     background: #FFF7F4;
   }
-  #drink {
+  .drink {
     background: #F3EEF5;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
+  
   }
   .fruits {
-   display: flex;
-   align-items: center;
-   width: 105px;
-   height: 45px;
-   font-family: 'Inter', sans-serif;
-   font-style: normal;
-   font-weight: 500;
-   font-size: 16px;
    background: #FFF1F4;
    border: 1.5px solid #FFF1F4;
-   border-radius: 32px;
   }
-  .drink {
-    width: 130px;
-    height: 35px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    color: #212529  ;
-  }
-
+  
   .addNewProduct {
     display: flex;
     align-items: center;
@@ -556,7 +529,7 @@ li {
     border: 1.5px solid #FF2253;
     border-radius: 32px;
     position: relative;
-    bottom: 130px;
+    bottom: 60px;
     left:-8%;
   }
   .subTitle {
@@ -565,7 +538,7 @@ li {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    gap: 250px;
+    gap: 330px;
     margin-left: 220px;
   }
   main{
@@ -573,16 +546,18 @@ li {
     margin-right: 80px;
   }
   .product {
-    height: 15%;
     display: flex;
     justify-content:flex-start;
     background: #FFFFFF;
     border: 1px solid #E9ECEF;
-    border-radius: 12px;
-    height: 30%;
-    width: 82%;
-    padding-left: 10%;
+    border-radius: 12px;  
     padding-bottom: 5px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  li{
+    margin-bottom: 40px;
   }
   h3 {
     font-size: 14px;
@@ -621,6 +596,17 @@ li {
     display: flex;
     width: 60px;
     justify-content: space-between;
+  }
+  #btnEdit,#btnDelete{
+    width:20px;
+    height: 20px;
+  }
+  .nomes{
+    display: flex;
+    width:20%;
+    justify-content: space-between;
+    align-items: center;
+   
   }
 
   /* Style modal add produto */
@@ -776,7 +762,7 @@ li {
   #productsList {
     display: block;
     justify-content: space-evenly;
-    width: 88%;
+    width: 100%;
     padding: 4px;
     height: 170px;
   }
