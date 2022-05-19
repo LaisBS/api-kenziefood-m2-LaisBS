@@ -4,12 +4,14 @@ import ProductsController from "/scripts/controllers/products-controller.js"
 
 let response=await ProductsController.getPrivateProducts()
 
-console.log(response)
+
+
 
 class myproducts{
     static products(response){
-        const ul=document.getElementById("ul")
 
+        const ul=document.getElementById("ul")
+        ul.innerHTML=""
         response.forEach(product => {
             const li =document.createElement("li");
             const div =document.createElement("div");
@@ -48,3 +50,5 @@ class myproducts{
     }
 }
 myproducts.products(response)
+
+export default myproducts
