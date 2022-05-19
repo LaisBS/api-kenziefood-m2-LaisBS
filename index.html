@@ -23,49 +23,68 @@
           </nav>
         </div>
 
-        <img src="images\pequisar.png" id="searchIcon">
-        <input type="text" id="Search" placeholder="Pesquisar por produto">
+        <div id="search-area">
+          <img src="images\pequisar.png" id="searchIcon">
+          <input type="text" id="Search" placeholder="Pesquisar por produto">
+        </div>
     </header>
 
     <div id="top">
-        <button id="All">Todos</button>
-        <img src="images\bread-icon.jpg">
-        <button id="bakery">Panificadora</button>
-        <img src="images\Icon_fruit.png">
-        <button id="Fruits">Frutas</button>
-        <img src="images\red-wine-cartoon.jpg">
-        <button id="Drinks">Bebidas</button>
+        <button class="All" id="botao-ativo">Todos</button>
+        <button class="Bakery">
+          <img src="images\bread-icon.jpg">
+          Panificadora
+        </button>
+        <button class="Fruits">
+          <img src="images\Icon_fruit.png">
+          Frutas
+        </button>
+        <button class="Drinks">
+          <img src="images\red-wine-cartoon.jpg">
+          Bebidas
+        </button>
     </div>
 
-     <main>
-        <ul id="ul">
+    <main>
+        <ul id="list-products">
 
         </ul>
     </main>
-    <aside>
-        <section class="purchaseCart">
-            <div id="tileCar"><img src=" images\cart_white.svg">  </i><h4> Carrinho</h4></div>
-            <div id="boxCart">
 
-            <section id="container-create-carItens">
-                <ul id="cartItens"></ul>
-                <div id="text" >
-                    <img id="bag"src="images/bag.png" >
-                    <small id="small">Por enquanto não temos produtos no carrinho</small>
-                </div>
-            </section>
+    <div id="tileCar">
+      <img src=" images\cart_white.svg">  </i>
+      <h4> Carrinho</h4>
+    </div>
+    <aside id="cart-modal">
+      <section class="purchaseCart">
+        <div id="cart-header">
+          <h2 id="cart-name">Carrinho</h2>
+          <h2 id="cart-close">X</h2>
         </div>
-        </section>
+
+        <div id="boxCart">
+            <ul id="cartItens">
+
+            </ul>
+
+            <div id="empyt-cart" >
+              <img id="bag"src="images/bag.png" >
+              <small id="small">Por enquanto não temos produtos no carrinho</small>
+            </div>
+        </div>
 
         <div id="container-purchase">
-            <div id="Quanti">
-                <p>Quantidade:</p> <p id="qtd">0</p>
-            </div>
-            <div id="Price">
-                <p>Total:</p>
-                <p id="RS">R$</p><p id="plus">0</p>
-            </div>
+          <div id="Quanti">
+            <p>Quantidade:</p>
+            <p id="qtd">0</p>
+          </div>
+          <div id="Price">
+            <p>Total:</p>
+            <p id="price-total">0</p>
+          </div>
         </div>
+      </section>
+
     </aside>
     <script type="module"src="./scripts/index.js"></script>
     <script type="module"src="./scripts/models/showcase.js"></script>
