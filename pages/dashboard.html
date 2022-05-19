@@ -15,15 +15,26 @@
 
     <div class="containerSearch">
       <form class="form" action="">
-        <img class="searchIcon" src="../images/pequisar.png">
-        <input type="text" placeHolder="Pesquisar" class="searchProduct">
+        <img src="/images/pequisar.png" id="search-icon">
+        <input type="text" placeHolder="Pesquisar por produto" class="searchProduct">
       </form>
-        <img class="userUrl" src="../images/img.perfil.jpg" alt="Foto perfil">
+        <img class="userUrl" src="/images/perfil vazio.png" alt="Foto perfil">
     </div>
   </header>
 
   <section class="filterButtons">
     <button class="allProducts">Todos</button>
+    <img src="/images/bread-icon.jpg">
+    <button class="bread">Panificadora</button>
+    <img src="/images/Icon_fruit.png">
+    <button class="fruits">Frutas</button>
+    <img src="/images/red-wine-cartoon.jpg">
+    <button class="drink">Bebidas</button>
+    </section>
+    <div class="add">
+      <button id="modalAddProduct" class="addNewProduct">Adicionar novo produto</button>
+      <div class="backgroundModalStyle">
+        <div class="modalAddProduct">
 
     <div class="bread">
       <img class="breadIcon" src="../images/bread-icon.jpg">
@@ -188,6 +199,10 @@
       </li>
      </ul>
 
+     <ul id="ul">
+
+    </ul>
+    <img src="/images/EDIT.svg">
    </main>
    <!--
    <footer class="footer">
@@ -200,5 +215,6 @@
       <p class="footerParagraph">Mensagem</p>
     </footer>-->
   <script type="module" src="../scripts/dashboard.js"></script>
+  <script type="module" src="../scripts/models/my-products.js"></script>
 </body>
 </html>
