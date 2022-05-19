@@ -1,4 +1,4 @@
-import ProductsController from "/scripts/controllers/products-controller.js"
+import ProductsController from "../controllers/products-controller.js"
 localStorage.setItem("Token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwNWNhYTZhLWY4NmMtNGU5OS1iZmJmLTVjNTI3MDZmM2U4NiIsImlhdCI6MTY1Mjk4MTE2MSwiZXhwIjoxNjUzODQ1MTYxLCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.27V3dVv2_BOr7QTifFZkD7WSruTpsmeqKjgeOb9yXfg")
 
 const response = await ProductsController.getPrivateProducts()

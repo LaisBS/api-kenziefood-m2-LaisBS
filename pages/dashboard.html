@@ -79,9 +79,63 @@
      <h3>Descrição</h3>
      <h3>Ações</h3>
    </div>
+   <!-- Modal edit product -->
+   <div id="editModal" class="editProductBackgroundModalStyle">
+    <div class="modalEditProduct">
+     <t class="registerProduct">Edição de Produto</t>
+     <span id="closeEditModal" class="span">x</span>
+     <h5 class="newProduct">Nome do Produto</h5>
+     <form class="modalForm" action="">
+       <input type="text" placeHolder="Digitar o nome" class="inputProduct">
+     </form>
+     <h5 class="newProduct">Descrição</h5>
+     <form class="modalFormDescription" action="">
+       <input type="text" placeholder="Digitar a descrição" class="inputProduct">
+      </form>
+      <div class="categories">
+        <h5 class="newProduct">Categorias</h5>
+        <div class="categoriesAll">
+          <button class="categoriesProducts">Panificadora</button>
+          <button class="categoriesProducts">Frutas</button>
+          <button class="categoriesProducts">Bebidas</button>
+        </div>
+      </div>
+      <h5 class="newProduct">Valor do Produto</h5>
+     <form class="modalFormPrice" action="">
+       <input type="text" placeholder="Digitar o valor aqui" class="inputProduct">
+     </form>
+     <h5 class="newProduct">Link da imagem</h5>
+     <form class="modalFormImg" action="">
+       <input type="text" placeholder="Inserir link" class="inputProduct">
+     </form>
+     <div class="productChange">
+       <button class="changes">Excluir</button>
+       <button class="changes">Salvar alterações</button>
+     </div>
+    </div>
+  </div>
+  <!--  término modal edit  -->
+
+  <!-- Modal botão delete produto-->
+
+  <div id="deleteModal" class="deleteProductBackgroundModalStyle">
+    <div class="modalDeleteProduct">
+      <t class="registerProduct">Exclusão de produto</t>
+      <span id="closeDeleteModal" class="span">x</span>
+        <h5 class="deleteProduct">Tem certeza que deseja excluir este produto?</h5>
+        <div class="productChange">
+          <button class="confirmDelete">Sim</button>
+          <button class="confirmDelete">Não</button>
+        </div>
+     </div>
+     </div>
+   </div>
+
+   <!----       término modal delete produto                           --->
 
    <main>
      <ul id="productsList">
+
 
      </ul>
 
