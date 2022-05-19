@@ -15,7 +15,7 @@ class Cart {
     caption.classList.add("category")
     p.classList.add("price")
     trash.classList.add("trash")
-    
+
     img.src=imagem
     h3.innerText=nome
     caption.innerText=categoria
@@ -24,7 +24,16 @@ class Cart {
     trash.addEventListener("click", (event) => {
         Cart.deleteItem(event)
     })
-    
+
+    let plus=document.getElementById("plus")
+    let count=plus.textContent
+    let result=Number(count)+Number(preco)
+    plus.textContent=result
+
+    let qtd=document.getElementById("qtd")
+    let valorQtd=qtd.textContent
+    qtd.textContent=Number(valorQtd)+1
+
     div.appendChild(h3)
     div.appendChild(caption)
     div.appendChild(p)
@@ -32,7 +41,7 @@ class Cart {
     cartItem.appendChild(img)
     cartItem.appendChild(div)
     cartItem.appendChild(trash)
-    
+
     cartItens.appendChild(cartItem)
 
   }
@@ -47,7 +56,7 @@ class Cart {
         let plus=document.getElementById("plus")
         let count=plus.textContent
         plus.textContent=Number(count)-Number(newPriceItem)
-       
+
         let qtd=document.getElementById("qtd")
         let valorQtd=qtd.textContent
         qtd.textContent=Number(valorQtd)-1
