@@ -10,7 +10,7 @@ class MyProducts{
 
     static products(response){
 
-        const ul=document.getElementById("ul")
+        const ul=document.getElementById("productsList")
         ul.innerHTML=""
         response.forEach(product => {
             const li =document.createElement("li");
@@ -19,6 +19,8 @@ class MyProducts{
             const img =document.createElement("img");
             img.setAttribute("class","photo")
             const h3 =document.createElement("h3");
+            const divn=document.createElement("div")
+            divn.setAttribute("class","nomes")
             const p=document.createElement("p")
             const pd=document.createElement("p")
             const divB =document.createElement("div");
@@ -30,19 +32,22 @@ class MyProducts{
 
             img.src=product.imagem
             h3.innerText=product.nome
+            divn.appendChild(img)
+            divn.appendChild(h3)
             p.innerText=product.categoria
             pd.innerText=product.descricao
             buttonE.src="/images/EDIT.svg"
             buttonD.src="/images/trash.svg"
 
-            div.appendChild(img)
-            div.appendChild(h3)
+            div.appendChild(divn)
             div.appendChild(p)
             div.appendChild(pd)
             divB.appendChild(buttonE)
             divB.appendChild(buttonD)
 
+            
             div.appendChild(divB)
+            
             li.appendChild(div)
 
             ul.appendChild(li)
