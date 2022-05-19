@@ -469,8 +469,6 @@ li {
     margin-left: 115px;
     gap:28px;
     text-align: center;
-
-
 }
 .filterButtons img{
   width: 20px;
@@ -508,13 +506,11 @@ li {
   }
   .drink {
     background: #F3EEF5;
-
   }
   .fruits {
    background: #FFF1F4;
    border: 1.5px solid #FFF1F4;
   }
-
   .addNewProduct {
     display: flex;
     align-items: center;
@@ -606,9 +602,7 @@ li {
     width:20%;
     justify-content: space-between;
     align-items: center;
-
   }
-
   /* Style modal add produto */
   .addProductBackgroundModalStyle {
     width: 100%;
