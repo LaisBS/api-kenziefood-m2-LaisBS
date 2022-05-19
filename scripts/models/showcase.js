@@ -120,4 +120,3 @@ class ShowCase {
 
 ShowCase.list(response)
 ShowCase.generateBtn();
-Cart.deleteBtn();

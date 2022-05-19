@@ -21,7 +21,7 @@ class Cart {
     caption.innerText=categoria
     p.innerText=`R$ ${preco}`
     trash.src="images/trash.svg"
-    trash.addEventListener("click",event=>{
+    trash.addEventListener("click", (event) => {
         Cart.deleteItem(event)
     })
     
@@ -39,6 +39,7 @@ class Cart {
 
   static deleteItem(event){
     const clickedElement=event.target.closest("li");
+    const cartItens=document.getElementById("cartItens");
 
     if(clickedElement) {
         let priceItem=clickedElement.querySelector(".price").textContent.trim()
@@ -53,16 +54,11 @@ class Cart {
 
         clickedElement.remove()
     }
-    let cartChildren=cartItens.children.length
+    let cartChildren = cartItens.children.length
     if(cartChildren===0){
         bag.classList.remove("hidden")
         small.classList.remove("hidden")
     }
-  }
-
-  static deleteBtn() {
-    const cart=document.getElementById("boxCart");
-    cart.addEventListener("click", Cart.deleteItem);
   }
 }
 
