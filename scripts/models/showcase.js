@@ -9,7 +9,7 @@ class ShowCase {
   }
 
   static list(response) {
-    const ul=document.getElementById("ul")
+    const ul=document.getElementById("list-products")
 
     ul.innerHTML=" ";
     response.forEach(product => {

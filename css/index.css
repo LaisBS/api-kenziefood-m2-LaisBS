@@ -91,7 +91,7 @@ main{
     height: 1000px;
 
 }
-ul{
+#list-products {
     position: relative;
     top: 90px;
     display: flex;
@@ -172,14 +172,21 @@ li p{
 }
 
 .purchaseCart {
-  background-color: #FF2253;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
   width: 90%;
+  height: 600px;
 }
 
 #tileCar {
   display: flex;
+  height: 10%;
   justify-content: center;
   align-items: center;
+  background-color: #FF2253;
   padding: 10px;
   gap: 10px;
   border-radius: 20px;
@@ -191,28 +198,71 @@ li p{
 }
 
 #boxCart{
-    width: 90%;
+    width: 100%;
+    height: 70%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow:scroll;
-    flex-direction: column;
+    padding: 15px;
 }
 
-#container-create-carItens{
+#cartItens {
+  display: flex;
+  height: 90%;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
 }
 
-#cartItens{
+.carItem{
+  display: flex;
+  justify-content: space-between;
+}
+
+.carPhoto{
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.info{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap:5px;
 }
 
-#empyt-cart{
+#empyt-cart {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #868E96;
   font-family:'Poppins', sans-serif;
+}
+
+#container-purchase {
+  display: flex;
+  height: 20%;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  bottom: 0%;
+}
+
+#container-purchase p{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color:#000000;
+}
+
+#Quanti{
+  display: flex;
+  justify-content: space-between;
 }
 .cart_price{
     display: flex;
@@ -246,27 +296,6 @@ li p{
     width: 60px;
     height: 60px;
 }
-.carItem{
-    width: 300px;
-    height: 83px;
-    display: flex;
-    flex-direction: row;
-}
-.carPhoto{
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-    margin-right: 12px;
-}
-.info{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap:5px;
-    height: 83px;
-
-}
 .carItem h3{
     font-style: normal;
     font-weight: 500;
@@ -291,39 +320,13 @@ li p{
     color:#212529;
     margin: 0;
 }
-.trash{
-    position: relative;
-    z-index:1;
-    left:200px;
-    bottom: 55px;
-}
 .hidden{
     display: none;
 }
 
 /* ___________________________________________________ */
-#container-purchase{
-    display: flex;
-    width: 319px;
-    height: 58px;
-    position: relative;
-    z-index: 1;
-    flex-direction: column;
-    bottom: 0%;
-}
-#container-purchase p{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    color:#000000;
-}
-#Quanti{
-    display: flex;
-    width: 365px;
-    height: 58px;
-    justify-content: space-between;
-}
+
+
 #Price{
     display: flex;
     width: 365px;
@@ -343,7 +346,7 @@ li p{
 }
 
 @media only screen and (min-width: 900px) {
-    ul{
+  #list-products{
         display: flex;
         flex-wrap: wrap;
     }
