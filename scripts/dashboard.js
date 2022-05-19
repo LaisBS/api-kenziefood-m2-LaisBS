@@ -8,7 +8,7 @@ const buttonEdit2 = document.getElementById("modalEditProduct2")
 const buttonEdit3 = document.getElementById("modalEditProduct3")
 const buttonEdit4 = document.getElementById("modalEditProduct4")
 
-buttonEdit.addEventListener("click", () => {
+/*buttonEdit.addEventListener("click", () => {
     modalEdit.style.display = "block"
 })
 buttonEdit1.addEventListener("click", () => {
@@ -26,7 +26,7 @@ buttonEdit4.addEventListener("click", () => {
 xEdit.addEventListener("click", () => {
     modalEdit.style.display = "none"
 })
-
+*/
 
 
 
@@ -42,8 +42,8 @@ buttonAdd.addEventListener("click", () => {
 xAdd.addEventListener("click", () => {
   modalAdd.style.display = "none"
 })
-
-/* --- modal delete produto --- */
+/*
+/* --- modal delete produto ---
 const buttonDelete = document.getElementById("modalDeleteProduct")
 const modalDelete = document.getElementById("deleteModal")
 const xDelete = document.getElementById("closeDeleteModal")
@@ -71,4 +71,7 @@ xDelete.addEventListener("click", () => {
   modalDelete.style.display = "none"
 })
 
-
+*/
+import MyProducts from "./controllers/products-controller.js"
+MyProducts.renderFirst()
+MyProducts.generateBtn()

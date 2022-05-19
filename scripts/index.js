@@ -1,4 +1,6 @@
-import showcase from "../scripts/models/showcase.js"
+import ShowCase from "../scripts/models/showcase.js"
+import Header from "../scripts/models/header.js"
 
-showcase.list();
-
+ShowCase.renderFirst();
+ShowCase.generateBtn();
+Header.renderHeader("Dashboard");

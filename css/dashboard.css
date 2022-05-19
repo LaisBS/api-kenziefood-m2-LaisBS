@@ -12,6 +12,12 @@ html, body {
   gap: 4px;
   flex-direction: row;
 }
+.filterButtons img{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 40px;
+}
 .containerSearch {
   background: #E9ECEF;
   display: flex;
@@ -277,7 +283,14 @@ button {
   align-items: center;
   padding: 15px;
 }
-
+.photo{
+  width: 32px;
+  height: 32px;
+  border-radius: 150px;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .h3 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -398,6 +411,7 @@ li {
     padding-top: 20px;
     padding-left: 20px;
     gap: 7px;
+    height: 72px;
    }
   .h1 {
     font-size:23px;
@@ -413,12 +427,20 @@ li {
     font-style: normal;
     font-weight: 700;
   }
+  #search-icon{
+    width: 20px;
+    height: 20px;
+    position:relative;
+    left: 32px;
+    z-index: 1;
+  }
   .containerSearch {
     display: flex;
     justify-content: flex-end;
     background-color: #fcfcfc;
     height: 40px;
     width: 80%;
+
   }
   .userUrl {
     padding-top: 05px;
@@ -436,83 +458,63 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 12px;
+    padding: 15px 18px 15px 50px;
   }
   .filterButtons {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
     display: flex;
-    align-items: center;
-    justify-items: center;
-    height: 30%;
-    width: 50%;
-    gap: 15px;
-    padding-left: 95px;
+    justify-content: flex-start;
+    margin-left: 115px;
+    gap:28px;
+    text-align: center;
+
+
+}
+.filterButtons img{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 70px;
 }
   .allProducts {
-    font-size: 16px;
-    background: #FF2253;
+    background-color: #FF2253;
+    color: #F8F9FA;
+    width: 88px;
+    height: 48px;
     border: 1.5px solid #FF2253;
-    border-radius: 42px;
-    padding: 15px 20px;
-    gap: 15px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+
+  }
+  .bread,.fruits,.drink{
+    background-color: #FFF1F4;
+    width: 170px;
+    height: 48px;
+    border: 1.5px solid #FFF1F4;
+    border-radius: 32px;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
   }
   .bread {
-    display: flex;
-    align-items: center;
-    width: 150px;
-    height: 49px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    background: #FFF7F4;
-    border: 1.5px solid #FFF7F4;
-    border-radius: 32px;
-  }
-  #fruits{
-    background: #FFF1F4;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-  }
-  #bakery {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    border: none;
     box-shadow: 0 0 0 0;
     outline: 0;
     background: #FFF7F4;
   }
-  #drink {
+  .drink {
     background: #F3EEF5;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
+
   }
   .fruits {
-   display: flex;
-   align-items: center;
-   width: 105px;
-   height: 45px;
-   font-family: 'Inter', sans-serif;
-   font-style: normal;
-   font-weight: 500;
-   font-size: 16px;
    background: #FFF1F4;
    border: 1.5px solid #FFF1F4;
-   border-radius: 32px;
   }
-  .drink {
-    width: 130px;
-    height: 35px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-  }
+
   .addNewProduct {
     display: flex;
     align-items: center;
@@ -526,25 +528,36 @@ li {
     font-size: 16px;
     border: 1.5px solid #FF2253;
     border-radius: 32px;
+    position: relative;
+    bottom: 60px;
+    left:-8%;
   }
   .subTitle {
     padding-right: 10%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    gap: 75px;
+    font-size: 14px;
+    gap: 330px;
+    margin-left: 220px;
+  }
+  main{
+    margin-left: 70px;
+    margin-right: 80px;
   }
   .product {
-    height: 15%;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     background: #FFFFFF;
     border: 1px solid #E9ECEF;
     border-radius: 12px;
-    height: 30%;
-    width: 82%;
-    padding-left: 10%;
     padding-bottom: 5px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  li{
+    margin-bottom: 40px;
   }
   h3 {
     font-size: 14px;
@@ -578,6 +591,22 @@ li {
     display: flex;
     gap: 15px;
     padding-right: 60px;
+  }
+  #actions{
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+  }
+  #btnEdit,#btnDelete{
+    width:20px;
+    height: 20px;
+  }
+  .nomes{
+    display: flex;
+    width:20%;
+    justify-content: space-between;
+    align-items: center;
+
   }
 
   /* Style modal add produto */
@@ -733,7 +762,7 @@ li {
   #productsList {
     display: block;
     justify-content: space-evenly;
-    width: 88%;
+    width: 100%;
     padding: 4px;
     height: 170px;
   }

@@ -15,33 +15,25 @@
 
     <div class="containerSearch">
       <form class="form" action="">
-        <img class="searchIcon" src="../images/pequisar.png">
-        <input type="text" placeHolder="Pesquisar" class="searchProduct">
+        <img src="/images/pequisar.png" id="search-icon">
+        <input type="text" placeHolder="Pesquisar por produto" class="searchProduct">
       </form>
-        <img class="userUrl" src="../images/img.perfil.jpg" alt="Foto perfil">
+        <img class="userUrl" src="/images/perfil vazio.png" alt="Foto perfil">
     </div>
   </header>
 
   <section class="filterButtons">
     <button class="allProducts">Todos</button>
+    <img src="/images/bread-icon.jpg">
+    <button class="bread">Panificadora</button>
+    <img src="/images/Icon_fruit.png">
+    <button class="fruits">Frutas</button>
+    <img src="/images/red-wine-cartoon.jpg">
+    <button class="drink">Bebidas</button>
+    </section>
 
-    <div class="bread">
-      <img class="breadIcon" src="../images/bread-icon.jpg">
-      <button id="bakery">Panificadora</button>
-    </div>
-
-    <div class="fruits">
-      <img class="fruitIcon" src="../images/Icon_fruit.png">
-      <button id="fruits">Frutas</button>
-    </div>
-
-    <div class="drink">
-      <img class="drinkIcon" src="../images/red-wine-cartoon.jpg">
-      <button id="drink">Bebidas</button>
-    </div>
-
-
-      <!-- Modal botão adicionar novo produto produto-->
+    <!-- Modal adicionar novo produto -->
+    <div class="add">
       <button id="modalAddProduct" class="addNewProduct">Adicionar novo produto</button>
       <div id="addModal" class="addProductBackgroundModalStyle">
         <div class="modalAddProduct">
@@ -79,6 +71,7 @@
     </div>
     <!-- Término botão adicionar novo produto produto-->
 
+
     </section>
    <div class="subTitle">
      <h3>Produto</h3>
@@ -89,124 +82,16 @@
 
    <main>
      <ul id="productsList">
-      <li class="product">
-          <h3 class="h3">Panqueca de Banana com aveia</h3>
-          <p class="paragraph1">Bebidas</p>
 
-          <p class="paragraph3">Esta receita serve muito bem duas pe...</p>
-          <div class="buttons">
-            <button id="modalEditProduct" class="edit">E</button>
-            <button id="modalDeleteProduct" class="delete">D</button>
-          </li>
-
-
-
-            <!-- Modal botão editar produto-->
-
-            <div id="editModal" class="editProductBackgroundModalStyle">
-              <div class="modalEditProduct">
-               <t class="registerProduct">Edição de Produto</t>
-               <span id="closeEditModal" class="span">x</span>
-               <h5 class="newProduct">Nome do Produto</h5>
-               <form class="modalForm" action="">
-                 <input type="text" placeHolder="Digitar o nome" class="inputProduct">
-               </form>
-               <h5 class="newProduct">Descrição</h5>
-               <form class="modalFormDescription" action="">
-                 <input type="text" placeholder="Digitar a descrição" class="inputProduct">
-                </form>
-                <div class="categories">
-                  <h5 class="newProduct">Categorias</h5>
-                  <div class="categoriesAll">
-                    <button class="categoriesProducts">Panificadora</button>
-                    <button class="categoriesProducts">Frutas</button>
-                    <button class="categoriesProducts">Bebidas</button>
-                  </div>
-                </div>
-                <h5 class="newProduct">Valor do Produto</h5>
-               <form class="modalFormPrice" action="">
-                 <input type="text" placeholder="Digitar o valor aqui" class="inputProduct">
-               </form>
-               <h5 class="newProduct">Link da imagem</h5>
-               <form class="modalFormImg" action="">
-                 <input type="text" placeholder="Inserir link" class="inputProduct">
-               </form>
-               <div class="productChange">
-                 <button class="changes">Excluir</button>
-                 <button class="changes">Salvar alterações</button>
-               </div>
-              </div>
-            </div>
-
-            <!-- Modal botão delete produto-->
-
-            <div id="deleteModal" class="deleteProductBackgroundModalStyle">
-              <div class="modalDeleteProduct">
-                <t class="registerProduct">Exclusão de produto</t>
-                <span id="closeDeleteModal" class="span">x</span>
-                  <h5 class="deleteProduct">Tem certeza que deseja excluir este produto?</h5>
-                  <div class="productChange">
-                    <button class="confirmDelete">Sim</button>
-                    <button class="confirmDelete">Não</button>
-                  </div>
-               </div>
-               </div>
-             </div>
-
-             <!----       término modal delete produto                           --->
-      <li class="product">
-          <h3 class="h3">Mousse de morango com a fruta</h3>
-          <p class="paragraph1">Bebidas</p>
-          <p class="paragraph3">Sobremesa fácil, rápida e muito sabor...</p>
-          <div class="buttons">
-            <button id="modalEditProduct1" class="edit">E</button>
-            <button id="modalDeleteProduct1" class="delete">D</button>
-          </div>
-
-      </li>
-      <li class="product">
-        <h3 class="h3">Pastel de verduras vegano</h3>
-        <p class="paragraph1">Panificadora</p>
-        <p class="paragraph3">Todos nós fervemos vegetais...</p>
-        <div class="buttons">
-          <button id="modalEditProduct2"class="edit">E</button>
-          <button id="modalDeleteProduct2" class="delete">D</button>
-        </div>
-
-      </li>
-      <li class="product">
-        <h3 class="h3">Pizza vegetariana de palmito</h3>
-        <p class="paragraph1">Panificadora</p>
-        <p class="paragraph3">Esse é um dos sabores de pizza mais...</p>
-        <div class="buttons">
-          <button id="modalEditProduct3" class="edit">E</button>
-           <button id="modalDeleteProduct3" class="delete">D</button>
-
-        </div>
-      </li>
-
-      <li class="product">
-        <h3 class="h3">Laranja Pera Fresca Kenzie 5kg</h3>
-        <p class="paragraph1">Frutas</p>
-        <p class="paragraph3">O vinho é rico em compostos nutricio...</p>
-        <div class="buttons">
-          <button id="modalEditProduct4" class="edit">E</button>
-           <button id="modalDeleteProduct4" class="delete">D</button>
-        </div>
-      </li>
      </ul>
 
+     <ul id="ul">
+
+    </ul>
+    
    </main>
-   <!--
-   <footer class="footer">
-     <div class="status">
-       <t class="mensage">Status</t>
-       <div>
-         <button class="close" class="close">X</button>
-        </div>
-      </div>
-      <p class="footerParagraph">Mensagem</p>
-    </footer>-->
+
   <script type="module" src="../scripts/dashboard.js"></script>
+  <script type="module" src="../scripts/models/my-products.js"></script>
 </body>
 </html>
