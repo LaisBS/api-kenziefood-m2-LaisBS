@@ -162,6 +162,58 @@ li p{
 .cartIcon:hover{
     filter: invert(37%) sepia(94%) saturate(2033%) hue-rotate(139deg) brightness(98%) contrast(91%);
 }
+
+/* Cart CSS */
+#cart-modal {
+  display: flex;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+}
+
+.purchaseCart {
+  background-color: #FF2253;
+  width: 90%;
+}
+
+#tileCar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+#tileCar h4 {
+  font-family:'Poppins', sans-serif;
+  color: white;
+}
+
+#boxCart{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:scroll;
+    flex-direction: column;
+}
+
+#container-create-carItens{
+}
+
+#cartItens{
+  display: flex;
+  flex-direction: column;
+}
+
+#empyt-cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #868E96;
+  font-family:'Poppins', sans-serif;
+}
 .cart_price{
     display: flex;
     padding: 10px;
@@ -188,37 +240,11 @@ li p{
 }
 /* ___________________________________________________________________________________________ */
 
-.purchaseCart{
-    background-color: #FF2253;
-    width: 374px;
-    height: 60px;
-    position: absolute;
-    bottom:-10%;
-    text-align: center
 
-}
-#text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 150px;
-    color: #868E96;
-    font-family:'Poppins', sans-serif;
-}
+
 #bag{
     width: 60px;
     height: 60px;
-}
-#container-create-carItens{
-    width: 350px;
-    height: 400px;
-}
-#tileCar{
-    font-family:'Poppins', sans-serif;
-    color: white;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17.1px;
 }
 .carItem{
     width: 300px;
@@ -240,11 +266,6 @@ li p{
     gap:5px;
     height: 83px;
 
-}
-#cartItens{
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
 }
 .carItem h3{
     font-style: normal;
@@ -280,17 +301,6 @@ li p{
     display: none;
 }
 
-#boxCart{
-    width: 350px;
-    height: 400px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow:scroll;
-    flex-direction: column;
-     justify-content: flex-start;
-
-}
 /* ___________________________________________________ */
 #container-purchase{
     display: flex;
@@ -407,7 +417,7 @@ li p{
       #tileCar h4{
         margin-left:5px
       }
-      #text{
+      #empyt-cart{
           width: 243px;
           font-family:'Poppins', sans-serif;
           font-style: normal;
@@ -418,7 +428,7 @@ li p{
             align-items: center;
             margin-left: 50px;
       }
-      #text img{
+      #empyt-cart img{
           width:80px;
           height:80px;
       }
