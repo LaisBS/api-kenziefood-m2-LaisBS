@@ -31,7 +31,7 @@ class UserController {
         const token = await response.json();
         console.log(token);
         localStorage.setItem("Token", token);
-        window.location = '../../index.html'
+        window.location = '../pages/dashboard.html'
       }
       return response.status;
     })
