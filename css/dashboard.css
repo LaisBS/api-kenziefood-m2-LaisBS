@@ -12,15 +12,13 @@ html, body {
   gap: 4px;
   flex-direction: row;
 }
-
 .containerSearch {
   background: #E9ECEF;
   display: flex;
   float: right;
   flex-wrap: nowrap;
   flex-direction: row;
-  padding-left: 3%;
-  gap: 35px;
+  gap: 15px;
 }
 .form {
   display: flex;
@@ -36,20 +34,20 @@ html, body {
   border: 1.5px solid #E9ECEF;
   border-radius: 12px;
   font-size:12px;
-
 }
 .userUrl {
-
-  background-color: white;
-}
-
+    padding-top: 05px;
+    width: 25px;
+    height: 25px;
+    border-radius: 20%;
+    padding-left: 3px;
+  }
 .h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 19px;
   padding-left: 10px;
   font-weight: 700;
 }
-
 .h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -63,9 +61,10 @@ html, body {
   gap: 2px;
   justify-items: center;
   align-items: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 25px;
+  padding-bottom: 15px;
   justify-content: space-evenly;
+  padding-right: 10px;
 }
 button {
   cursor: pointer;
@@ -77,14 +76,17 @@ button {
   background: #FF2253;
   border: 1.5px solid #FF2253;
   border-radius: 15px;
-  width: 14%;
-  height: 15%;
+  width: 150px;
+  height: 15px;
   font-size: 10px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .addProductBackgroundModalStyle {
   width: 100%;
-  height: 100%;
+  height: 110%;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 2;
@@ -94,7 +96,7 @@ button {
 }
 .editProductBackgroundModalStyle {
   width: 100%;
-  height: 100%;
+  height: 110%;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 2;
@@ -157,7 +159,7 @@ button {
   font-size: 14px;
   padding: 8px;
 }
-.cadastrarProduto {
+.productChange {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -221,16 +223,19 @@ button {
 }
 
 .bread {
+  display: flex;
+  align-items: center;
   font-family: 'Inter', sans-serif;
   font-size: 10px;
   background: #FFF7F4;
-  font-style: normal;
   font-weight: 500;
   border: 1.5px solid #FFF7F4;
   border-radius: 15px;
 }
 
 .fruits {
+  display: flex;
+  align-items: center;
   font-family: 'Inter', sans-serif;
   font-size: 10px;
   background: #FFF1F4;
@@ -241,6 +246,8 @@ button {
 }
 
 .drink {
+  display: flex;
+  align-items: center;
   font-family: 'Inter', sans-serif;
   font-size: 10px;
   background: #F3EEF5;
@@ -268,17 +275,7 @@ button {
   color: #868E96;
   justify-content: space-evenly;
   align-items: center;
-  padding-bottom: 5%;
-}
-
-.product {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  padding: 5%;
-  border: 1px solid #E9ECEF;
-  border-radius: 12px;
+  padding: 15px;
 }
 
 .h3 {
@@ -287,7 +284,6 @@ button {
   font-weight: 500;
   color: #212529;
   font-size: 10px;
-
 }
 .paragraph1 {
   font-family: 'Poppins', sans-serif;
@@ -333,54 +329,64 @@ button {
   justify-content: center;
   font-size: 9px;
 }
-
-.status {
+.searchIcon{
+  width: 10px;
+  height: 10px;
+}
+.breadIcon {
+  width: 10px;
+  height: 10px;
+}
+.fruitIcon {
+  width: 10px;
+  height: 10px;
+}
+.drinkIcon {
+  width: 10px;
+  height: 10px;
+}
+#bakery {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  border: none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  background: #FFF7F4;
+}
+#fruits {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  border: none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+#drink{
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  border: none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  background: #FFF7F4;
+}
+#productsList {
+  display: block;
+  width: 100%;
+  height: 15%;
+  padding: 4px;
+}
+li {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  width: 94%;
+  height: 35%;
+  list-style: none;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   align-items: center;
-  float: right;
-  position: absolute;
-  top: 94%;
-  left: 60%;
-  padding-top: 2px;
-  background: #F8F9FA;
-  border-radius: 8px 8px 0px 0px;
-  width: 100px;
-  height: 30px;
-  padding-right: 5px;
-  bottom: 25px;
-}
-.mensage {
-  background: #FFFFFF;
-  border-radius: 0px 0px 8px 8px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  border: 1px solid #E9ECEF;
+  border-radius: 12px;
 }
 
-
-.close {
-  background: #E9ECEF;
-  border-radius: 4px;
-  border: none;
-  font-size: 10px;
-}
-
-.footerParagraph {
-    font-size: 12px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 5px;
-    background: #fff;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    right: 68px;
-    top: 100%;
-
-}
 /* Style para dispositivo com tamanho acima de 768px  */
 
  @media screen and (min-width: 768px) {
@@ -415,9 +421,16 @@ button {
     width: 80%;
   }
   .userUrl {
-    padding-top: 11px;
+    padding-top: 05px;
+    width: 50px;
+    height: 30px;
+    border-radius: 30%;
   }
   .searchProduct {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
     height: 45px;
     width: 230px;
     display: flex;
@@ -425,7 +438,6 @@ button {
     justify-content: center;
     padding-left: 12px;
   }
-
   .filterButtons {
     display: flex;
     align-items: center;
@@ -434,9 +446,7 @@ button {
     width: 50%;
     gap: 15px;
     padding-left: 95px;
-
 }
-
   .allProducts {
     font-size: 16px;
     background: #FF2253;
@@ -444,10 +454,11 @@ button {
     border-radius: 42px;
     padding: 15px 20px;
     gap: 15px;
-
   }
   .bread {
-    width: 140px;
+    display: flex;
+    align-items: center;
+    width: 150px;
     height: 49px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -457,8 +468,34 @@ button {
     border: 1.5px solid #FFF7F4;
     border-radius: 32px;
   }
+  #fruits{
+    background: #FFF1F4;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  #bakery {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background: #FFF7F4;
+  }
+  #drink {
+    background: #F3EEF5;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+  }
   .fruits {
-   width: 90px;
+   display: flex;
+   align-items: center;
+   width: 105px;
    height: 45px;
    font-family: 'Inter', sans-serif;
    font-style: normal;
@@ -468,9 +505,8 @@ button {
    border: 1.5px solid #FFF1F4;
    border-radius: 32px;
   }
-
   .drink {
-    width: 120px;
+    width: 130px;
     height: 35px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -496,10 +532,10 @@ button {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
     gap: 75px;
   }
   .product {
+    height: 15%;
     display: flex;
     justify-content: space-between;
     background: #FFFFFF;
@@ -508,9 +544,20 @@ button {
     height: 30%;
     width: 82%;
     padding-left: 10%;
+    padding-bottom: 5px;
+  }
+  h3 {
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
   }
   .h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
     font-size: 14px;
+    line-height: 24px;
   }
   .paragraph1 {
     display: flex;
@@ -526,54 +573,13 @@ button {
   }
   .paragraph3 {
     font-size: 14px;
-    padding-left: 125px;
   }
   .buttons {
     display: flex;
     gap: 15px;
+    padding-right: 60px;
   }
 
-  .status {
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    background: #F8F9FA;
-    border-radius: 8px 8px 0px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 28px;
-    gap: 156px;
-    position: absolute;
-    width: 406px;
-    height: 60px;
-    left: 1400px;
-    top: 230%;
-  }
-
-  .footerParagraph {
-    font-size:14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    background: #fff;
-    border-radius: 8px 8px 0px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 28px;
-    gap: 156px;
-    position: absolute;
-    width: 406px;
-    height: 60px;
-    left: 1400px;
-    top: 235%;
-  }
   /* Style modal add produto */
   .addProductBackgroundModalStyle {
     width: 100%;
@@ -631,8 +637,11 @@ button {
     justify-content: center;
     gap: 60px;
   }
-  .cadastrarProduto {
-    padding: 25px;
+  .productChange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
     gap: 70px;
   }
   .acceptProduct {
@@ -703,6 +712,42 @@ button {
     color: #868E96;
     width: 150px;
     height: 60px;
+  }
+  .searchIcon{
+    width: 30px;
+    height: 30px;
+  }
+  .breadIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .fruitIcon {
+    width: 30px;
+    height: 30px;
+
+  }
+  .drinkIcon {
+    width: 30px;
+    height: 30px;
+  }
+  #productsList {
+    display: block;
+    justify-content: space-evenly;
+    width: 88%;
+    padding: 4px;
+    height: 170px;
+  }
+  #li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: nowrap;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #E9ECEF;
+    border-radius: 12px;
+    padding: 20px;
   }
 
  }
