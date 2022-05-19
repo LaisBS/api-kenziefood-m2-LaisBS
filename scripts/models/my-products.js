@@ -1,7 +1,7 @@
 import ProductsController from "/scripts/controllers/products-controller.js"
-localStorage.setItem("Token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwNWNhYTZhLWY4NmMtNGU5OS1iZmJmLTVjNTI3MDZmM2U4NiIsImlhdCI6MTY1Mjk2NTM1OCwiZXhwIjoxNjUzODI5MzU4LCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.bnCtniDyS8LF2nBXY7QVC3mhO8i-pXMQhrZb3s2feSM")
+localStorage.setItem("Token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwNWNhYTZhLWY4NmMtNGU5OS1iZmJmLTVjNTI3MDZmM2U4NiIsImlhdCI6MTY1Mjk4MTE2MSwiZXhwIjoxNjUzODQ1MTYxLCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.27V3dVv2_BOr7QTifFZkD7WSruTpsmeqKjgeOb9yXfg")
 
-const response=await ProductsController.getPrivateProducts()
+const response = await ProductsController.getPrivateProducts()
 
 class MyProducts{
     static renderFirst() {
@@ -45,9 +45,9 @@ class MyProducts{
             divB.appendChild(buttonE)
             divB.appendChild(buttonD)
 
-            
+
             div.appendChild(divB)
-            
+
             li.appendChild(div)
 
             ul.appendChild(li)

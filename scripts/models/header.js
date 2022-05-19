@@ -1,6 +1,5 @@
 class Header {
   static renderHeader(goPage) {
-    localStorage.setItem("Token", "test");
     const menu = document.getElementById("menu");
     const token = localStorage.getItem("Token");
     if (token) {
