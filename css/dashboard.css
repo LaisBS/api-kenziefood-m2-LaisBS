@@ -622,14 +622,15 @@ li {
   }
   .modalAddProduct {
     display: block;
-    width: 20%;
-    height: 80%;
+    width: 30%;
+    height: 95%;
     background: #FFFFFF;
     border-radius: 8px 8px 8px 8px;
     margin: 90px auto 0 auto;
     transition: 350ms;
-    top: -100%;
+    top: -10%;
     padding-top: 7px;
+    position: relative;
   }
   .registerProduct {
     font-family: 'Poppins';
@@ -659,6 +660,10 @@ li {
     gap: 105px;
     width: 100px;
     height: 35px;
+  }
+  .categoriesProducts:hover{
+    background-color: #FF2253;
+    color: #DEE2E6;
   }
   .categoriesAll {
     display: flex;

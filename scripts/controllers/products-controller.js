@@ -34,7 +34,7 @@ class ProductsController {
   }
 
   static async createProduct(productData) {
-    return await fetch(this.BASE_URL+"products", {
+    return await fetch(this.BASE_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,15 +43,17 @@ class ProductsController {
       body: JSON.stringify(productData)
     })
     .then((response) => {
+      window.location = '../pages/dashboard.html'
       return response.status;
     })
     .catch((error) => {
       console.error(error);
     });
+    
   }
 
-  static async changeProduct(productData) {
-    return await fetch(this.BASE_URL+"products", {
+  static async changeProduct(productData,id) {
+    return await fetch(`${this.BASE_URL}+"products"${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
