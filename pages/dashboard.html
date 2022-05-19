@@ -12,26 +12,72 @@
   <header class="header">
     <h1 class="h1">Kenzie</h1>
     <h2 class="h2">Food</h2>
+
     <div class="containerSearch">
       <form class="form" action="">
-        <input type="text" placeHolder="Pesquisar por produto" class="searchProduct">
+        <img class="searchIcon" src="../images/pequisar.png">
+        <input type="text" placeHolder="Pesquisar" class="searchProduct">
       </form>
-        <img class="userUrl" src="" alt="Foto perfil">
+        <img class="userUrl" src="../images/img.perfil.jpg" alt="Foto perfil">
     </div>
   </header>
+
   <section class="filterButtons">
     <button class="allProducts">Todos</button>
-    <button class="bread">Panificadora</button>
-    <button class="fruits">Frutas</button>
-    <button class="drink">Bebidas</button>
-    <div class="add">
-      <button id="modalAddProduct" class="addNewProduct">Adicionar novo produto</button>
-      <div class="backgroundModalStyle">
-        <div class="modalAddProduct">
 
-        </div>
+    <div class="bread">
+      <img class="breadIcon" src="../images/bread-icon.jpg">
+      <button id="bakery">Panificadora</button>
+    </div>
+
+    <div class="fruits">
+      <img class="fruitIcon" src="../images/Icon_fruit.png">
+      <button id="fruits">Frutas</button>
+    </div>
+
+    <div class="drink">
+      <img class="drinkIcon" src="../images/red-wine-cartoon.jpg">
+      <button id="drink">Bebidas</button>
+    </div>
+
+
+      <!-- Modal botão adicionar novo produto produto-->
+      <button id="modalAddProduct" class="addNewProduct" onclick="openModalAddProduct()">Adicionar novo produto</button>
+      <div class="addProductBackgroundModalStyle" id="modalProduct">
+        <div class="modalAddProduct">
+          <t class="registerProduct">Cadastro de Produto</t>
+          <span class="span" onclick="closeModal()">x</span>
+          <h5 class="newProduct">Nome do Produto</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeHolder="Digitar o nome" class="inputProduct">
+          </form>
+          <h5 class="newProduct">Descrição</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeholder="Digitar a descrição" class="inputProduct">
+          </form>
+          <div class="categories">
+          <h5 class="newProduct">Categorias</h5>
+          <div class="categoriesAll">
+            <button class="categoriesProducts">Panificadora</button>
+            <button class="categoriesProducts">Frutas</button>
+            <button class="categoriesProducts">Bebidas</button>
+          </div>
+          </div>
+          <h5 class="newProduct">Valor do Produto</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeholder="Digitar o valor aqui" class="inputProduct">
+          </form>
+          <h5 class="newProduct">Link da imagem</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeholder="Inserir link" class="inputProduct">
+          </form>
+          <div class="productChange">
+            <button class="acceptProduct">Cadastrar produto</button>
+          </div>
+      </div>
       </div>
     </div>
+    <!-- Término botão adicionar novo produto produto-->
     </section>
    <div class="subTitle">
      <h3>Produto</h3>
@@ -39,54 +85,111 @@
      <h3>Descrição</h3>
      <h3>Ações</h3>
    </div>
+
    <main>
-     <div class="product">
-       <h3 class="h3">Panqueca de banana com aveia</h3>
-       <p class="paragraph1">Bebidas</p>
-       <!--<p class="paragraph2">Frutas</p> -->
-       <p class="paragraph3">Esta receita serve muito bem...</p>
-       <div class="buttons">
-         <button id="btnEdit" class="edit">E</button>
-         <button id="btnDelete" class="delete">D</button>
-       </div>
-     </div>
-     <div class="product">
-       <h3 class="h3">Mousse de morango com a fruta</h3>
-       <p class="paragraph1">Bebidas</p>
-       <p class="paragraph3">Sobremesa fácil, rápida e muito...</p>
-       <div class="buttons">
-         <button id="btnEdit" class="edit">E</button>
-         <button id="btnDelete" class="delete">D</button>
-       </div>
-     </div>
-     <div class="product">
-       <h3 class="h3">Pastel de verdura vegano</h3>
-       <p class="paragraph1">Bebidas</p>
-       <p class="paragraph3">Todos nós fervemos vegetais, salteamos</p>
-       <div class="buttons">
-         <button id="btnEdit" class="edit">E</button>
-         <button id="btnDelete" class="delete">D</button>
-       </div>
-     </div>
-     <div class="product">
-       <h3 class="h3">Pizza vegetariana de palmito</h3>
-       <p class="paragraph1">Bebidas</p>
-       <p class="paragraph3">Esse é um dos sabores de pizza mais...</p>
-       <div class="buttons">
-         <button id="btnEdit" class="edit">E</button>
-         <button id="btnDelete" class="delete">D</button>
-       </div>
-     </div>
-     <div class="product">
-       <h3 class="h3">Laranja Pera Fresca 5kg</h3>
-       <p class="paragraph1">Frutas</p>
-       <p class="paragraph3">O vinho é rico em compostos nutrício...</p>
-       <div class="buttons">
-         <button id="btnEdit" class="edit">E</button>
-         <button id="btnDelete" class="delete">D</button>
-       </div>
-      </div>
+     <ul id="productsList">
+      <li class="product">
+          <h3 class="h3">Panqueca de Banana com aveia</h3>
+          <p class="paragraph1">Bebidas</p>
+
+          <p class="paragraph3">Esta receita serve muito bem duas pe...</p>
+          <div class="buttons">
+            <!-- Modal botão editar produto-->
+
+            <button id="modalEditProduct" class="edit" onclick="openModalEditProduct()">E</button>
+            <div class="editProductBackgroundModalStyle">
+              <div class="modalEditProduct">
+               <t class="registerProduct">Edição de Produto</t>
+               <span class="span" onclick="closeModal()">x</span>
+               <h5 class="newProduct">Nome do Produto</h5>
+               <form class="modalForm" action="">
+                 <input type="text" placeHolder="Digitar o nome" class="inputProduct">
+               </form>
+               <h5 class="newProduct">Descrição</h5>
+               <form class="modalFormDescription" action="">
+                 <input type="text" placeholder="Digitar a descrição" class="inputProduct">
+               </form>
+               <div class="categories">
+               <h5 class="newProduct">Categorias</h5>
+               <div class="categoriesAll">
+                 <button class="categoriesProducts">Panificadora</button>
+                 <button class="categoriesProducts">Frutas</button>
+                 <button class="categoriesProducts">Bebidas</button>
+               </div>
+               </div>
+               <h5 class="newProduct">Valor do Produto</h5>
+               <form class="modalFormPrice" action="">
+                 <input type="text" placeholder="Digitar o valor aqui" class="inputProduct">
+               </form>
+               <h5 class="newProduct">Link da imagem</h5>
+               <form class="modalFormImg" action="">
+                 <input type="text" placeholder="Inserir link" class="inputProduct">
+               </form>
+               <div class="productChange">
+                 <button class="changes">Excluir</button>
+                 <button class="changes">Salvar alterações</button>
+               </div>
+              </div>
+            </div>
+            <!-- Modal botão delete produto-->
+            <button id="modalDeleteProduct" class="delete" onclick="openModalDeleteProduct()">D</button>
+            <div class="deleteProductBackgroundModalStyle">
+              <div class="modalDeleteProduct">
+                <t class="registerProduct">Exclusão de produto</t>
+                <span class="span" onclick="closeModal()">x</span>
+                  <h5 class="deleteProduct">Tem certeza que deseja excluir este produto?</h5>
+                  <div class="productChange">
+                    <button class="confirmDelete">Sim</button>
+                    <button class="confirmDelete">Não</button>
+                  </div>
+               </div>
+               </div>
+             </div>
+      </li>
+
+      <li class="product">
+          <h3 class="h3">Mousse de morango com a fruta</h3>
+          <p class="paragraph1">Bebidas</p>
+          <p class="paragraph3">Sobremesa fácil, rápida e muito sabor...</p>
+          <div class="buttons">
+           <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
+           <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+          </div>
+
+      </li>
+      <li class="product">
+        <h3 class="h3">Pastel de verduras vegano</h3>
+        <p class="paragraph1">Panificadora</p>
+        <p class="paragraph3">Todos nós fervemos vegetais...</p>
+        <div class="buttons">
+          <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
+          <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+        </div>
+
+      </li>
+      <li class="product">
+        <h3 class="h3">Pizza vegetariana de palmito</h3>
+        <p class="paragraph1">Panificadora</p>
+        <p class="paragraph3">Esse é um dos sabores de pizza mais...</p>
+        <div class="buttons">
+          <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
+           <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+        </div>
+      </li>
+
+      <li class="product">
+        <h3 class="h3">Laranja Pera Fresca Kenzie 5kg</h3>
+        <p class="paragraph1">Frutas</p>
+        <p class="paragraph3">O vinho é rico em compostos nutricio...</p>
+        <div class="buttons">
+          <button id="modalEditProduct" class="edit" onclick="openModal()">E</button>
+           <button id="modalDeleteProduct" class="delete" onclick="openModal()">D</button>
+        </div>
+      </li>
+     </ul>
+
    </main>
+   <!--
    <footer class="footer">
      <div class="status">
        <t class="mensage">Status</t>
@@ -95,7 +198,7 @@
         </div>
       </div>
       <p class="footerParagraph">Mensagem</p>
-    </footer>
+    </footer>-->
   <script type="module" src="../scripts/dashboard.js"></script>
 </body>
 </html>
