@@ -10,20 +10,21 @@
     <title>Home Page</title>
 </head>
 <body>
+
     <header>
         <div id="title">
             <h1>Kenzie</h1>
             <h2>Food</h2>
         </div>
-        
-        <img src="images\pequisar.png" id="search-icon">
-        <input type="text" id="search" placeholder="Pesquisar por produto">
+
+        <img src="images\pequisar.png" id="searchIcon">
+        <input type="text" id="Search" placeholder="Pesquisar por produto">
     </header>
 
     <div id="top">
         <button id="All">Todos</button>
         <img src="images\bread-icon.jpg">
-        <button id="Bakery">Panificadora</button>
+        <button id="bakery">Panificadora</button>
         <img src="images\Icon_fruit.png">
         <button id="Fruits">Frutas</button>
         <img src="images\red-wine-cartoon.jpg">
@@ -31,30 +32,37 @@
     </div>
 
      <main>
-        <ul id="list-products">
-           
+        <ul id="ul">
+
         </ul>
     </main>
-
-    <aside >
+    <aside>
         <section class="purchaseCart">
-            <div id="tile-car">
-                <img src=" images\cart_white.svg">  </i>
-                <h4>Carrinho</h4>
-            </div>
+            <div id="tileCar"><img src=" images\cart_white.svg">  </i><h4> Carrinho</h4></div>
+            <div id="boxCart">
 
-            <div id="caixa-carrinho">
-                <section id="container-create-car-itens">
-                    <div id="empty-cart">
-                        <img src="images/bag.png">  
-                        <small id="add">Por enquanto não temos produtos no carrinho</small>
-                    </div>
-                </section>
-            </div>
+            <section id="container-create-carItens">
+                <ul id="cartItens"></ul>
+                <div id="text" >
+                    <img id="bag"src="images/bag.png" >
+                    <small id="small">Por enquanto não temos produtos no carrinho</small>
+                </div>
+            </section>
+        </div>
         </section>
+
+        <div id="container-purchase">
+            <div id="Quanti">
+                <p>Quantidade:</p> <p id="qtd">0</p>
+            </div>
+            <div id="Price">
+                <p>Total:</p>
+                <p id="RS">R$</p><p id="plus">0</p>
+            </div>
+        </div>
     </aside>
     <script type="module"src="./scripts/index.js"></script>
     <script type="module"src="./scripts/models/showcase.js"></script>
-    
+    <script type="module" src="./scripts/models/cart.js"></script>
 </body>
 </html>
