@@ -2,8 +2,9 @@ class Header {
   static renderHeader(goPage) {
     const menu = document.getElementById("menu");
     const token = localStorage.getItem("Token");
+    const changePageBtn = document.createElement("button");
+
     if (token) {
-      const changePageBtn = document.createElement("button");
       const logoutBtn = document.createElement("button");
 
       changePageBtn.setAttribute("id", "changePage-btn");
@@ -23,9 +24,17 @@ class Header {
         window.location = "../pages/login.html"
       })
 
-      menu.appendChild(changePageBtn);
       menu.appendChild(logoutBtn);
+    } else {
+      changePageBtn.innerText = " Login ";
+
+      changePageBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        window.location = "../pages/login.html";
+      })
     }
+    menu.appendChild(changePageBtn);
   }
 
   static changePage(event, goPage) {
