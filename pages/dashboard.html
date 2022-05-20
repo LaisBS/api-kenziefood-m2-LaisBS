@@ -30,11 +30,46 @@
     <button class="fruits">Frutas</button>
     <img src="/images/red-wine-cartoon.jpg">
     <button class="drink">Bebidas</button>
-    </section>
+  </section>
     <div class="add">
       <button id="modalAddProduct" class="addNewProduct">Adicionar novo produto</button>
+      <div id="addModal" class="addProductBackgroundModalStyle">
+        <div class="modalAddProduct">
+          <t class="registerProduct">Cadastro de Produto</t>
+          <span id="closeAddModal" class="span">x</span>
+          <h5 class="newProduct">Nome do Produto</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeHolder="Digitar o nome" class="inputProduct" id="name">
+          </form>
+          <h5 class="newProduct">Descrição</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeholder="Digitar a descrição" class="inputProduct" id="description">
+          </form>
+          <div class="categories">
+          <h5 class="newProduct">Categorias</h5>
+          <div class="categoriesAll">
+            <button id="1"class="categoriesProducts">Panificadora</button>
+            <button id="2"class="categoriesProducts">Frutas</button>
+            <button id="3"class="categoriesProducts">Bebidas</button>
+          </div>
+          </div>
+          <h5 class="newProduct">Valor do Produto</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeholder="Digitar o valor aqui" class="inputProduct" id="pricess">
+          </form>
+          <h5 class="newProduct">Link da imagem</h5>
+          <form class="modalForm" action="">
+            <input type="text" placeholder="Inserir link" class="inputProduct" id="link">
+          </form>
+          <div class="productChange">
+            <button id="accept"class="acceptProduct">Cadastrar produto</button>
+          </div>
+      </div>
+      </div>
+    </div> -->
 
-    </section>
+
+
    <div class="subTitle">
      <h3>Produto</h3>
      <h3>Categorias</h3>
@@ -46,13 +81,10 @@
      <ul id="productsList">
 
      </ul>
-
-     <ul id="ul">
-
-    </ul>
    </main>
 
   <script type="module" src="../scripts/dashboard.js"></script>
   <script type="module" src="../scripts/models/my-products.js"></script>
+  <script type="module" src="../scripts/models/create-product.js"></script>
 </body>
 </html>
