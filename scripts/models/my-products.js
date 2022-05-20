@@ -30,6 +30,13 @@ class MyProducts{
             const buttonD=document.createElement("img");
             buttonD.setAttribute("id","btnDelete")
 
+            buttonE.addEventListener("click", (event) => {
+              event.preventDefault();
+
+              const editModal = document.querySelector(".editProductBackgroundModalStyle");
+              editModal.style.display = "block";
+            })
+
             img.src=product.imagem
             h3.innerText=product.nome
             divn.appendChild(img)
