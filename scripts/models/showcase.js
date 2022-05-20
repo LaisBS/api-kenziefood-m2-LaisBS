@@ -69,25 +69,29 @@ class ShowCase {
   }
 
   static sectionFilter(event) {
-    if(event.target.textContent==="Panificadora") {
+    const btnAtivo = document.getElementById("botao-ativo");
+    btnAtivo.id = "";
+
+    event.target.id = "botao-ativo"
+    if(event.target.classList.value==="Bakery") {
       const bList=response.filter((product)=>{
           let search = product.categoria
           return search==="Panificadora"
       });
       ShowCase.list(bList)
-    } else if(event.target.textContent==="Frutas") {
+    } else if(event.target.classList.value==="Fruits") {
         const fList=response.filter((product)=>{
             let search = product.categoria
             return search==="Frutas"
       });
     ShowCase.list(fList)
-    } else if(event.target.textContent==="Bebidas") {
+    } else if(event.target.classList.value==="Drinks") {
         const dList=response.filter((product)=>{
             let search = product.categoria
             return search==="Bebidas"
       });
       ShowCase.list(dList)
-    } else if(event.target.textContent==="Todos") {
+    } else if(event.target.classList.value==="All") {
             return ShowCase.list(response)
     }
   }
