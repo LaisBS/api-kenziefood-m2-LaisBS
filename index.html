@@ -45,48 +45,49 @@
         </button>
     </div>
 
-    <main>
-        <ul id="list-products">
+    <div id="container-area">
+      <main>
+          <ul id="list-products">
 
-        </ul>
-    </main>
+          </ul>
+      </main>
 
-    <div id="tileCar">
-      <img src=" images\cart_white.svg">  </i>
-      <h4> Carrinho</h4>
-    </div>
-    <aside id="cart-modal">
-      <section class="purchaseCart">
-        <div id="cart-header">
-          <img src=" images\cart_white.svg">  </i>
-          <h2 id="cart-name">Carrinho</h2>
-          <h2 id="cart-close">X</h2>
-        </div>
+      <div id="tileCar">
+        <img src=" images\cart_white.svg">  </i>
+        <h4> Carrinho</h4>
+      </div>
+      <aside id="cart-modal">
+        <section class="purchaseCart">
+          <div id="cart-header">
+            <img src=" images\cart_white.svg">  </i>
+            <h2 id="cart-name">Carrinho</h2>
+            <h2 id="cart-close">X</h2>
+          </div>
 
-        <div id="boxCart">
-            <ul id="cartItens">
+          <div id="boxCart">
+              <ul id="cartItens">
 
-            </ul>
+              </ul>
 
-            <div id="empyt-cart" >
-              <img id="bag"src="images/bag.png" >
-              <small id="small">Por enquanto não temos produtos no carrinho</small>
+              <div id="empyt-cart" >
+                <img id="bag"src="images/bag.png" >
+                <small id="small">Por enquanto não temos produtos no carrinho</small>
+              </div>
+          </div>
+
+          <div id="container-purchase">
+            <div id="Quanti">
+              <p>Quantidade:</p>
+              <p id="qtd">0</p>
             </div>
-        </div>
-
-        <div id="container-purchase">
-          <div id="Quanti">
-            <p>Quantidade:</p>
-            <p id="qtd">0</p>
+            <div id="Price">
+              <p>Total:</p>
+              <p id="price-total">0</p>
+            </div>
           </div>
-          <div id="Price">
-            <p>Total:</p>
-            <p id="price-total">0</p>
-          </div>
-        </div>
-      </section>
-
-    </aside>
+        </section>
+      </aside>
+    </div>
     <script type="module"src="./scripts/index.js"></script>
     <script type="module"src="./scripts/models/showcase.js"></script>
     <script type="module" src="./scripts/models/cart.js"></script>

@@ -378,15 +378,17 @@ main{
   }
 
   main {
+    margin: 0;
     overflow-x: visible;
-    margin-left: 5%;
     width: 70%;
+    height: unset;
   }
 
   #list-products {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0;
+    height: unset;
   }
 
   .preview-product {
@@ -395,32 +397,25 @@ main{
   }
 
   #tileCar {
-    position: fixed;
-    top: 0;
-    width: 300px;
-    height: 50px;
-    border-radius: 10px 10px 0 0;
-    top: calc(5% + 75px);
-    right: 5%;
+    display: none;
   }
 
   #cart-modal {
     display: flex;
     width: 300px;
     height: 100%;
-    position: fixed;
+    position: sticky;
     background-color: white;
     justify-content: center;
-    top: calc(5% + 125px);
-    right: 5%;
     left: unset;
   }
 
-  #cart-header {
+  #cart-close {
     display: none;
   }
 
   .purchaseCart {
+    margin: 0;
     width: 100%;
   }
 
@@ -444,6 +439,10 @@ main{
   #boxCart::-webkit-scrollbar {
     width: 0;
   }
+
+  #container-area {
+    display: flex;
+    margin: 0 5%;
+    justify-content: space-between;
+  }
 }
-
-
