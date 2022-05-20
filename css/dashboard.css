@@ -13,10 +13,11 @@ html, body {
   flex-direction: row;
 }
 .filterButtons img{
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   position: relative;
-  left: 40px;
+  left: 30px;
+  
 }
 .containerSearch {
   background: #E9ECEF;
@@ -25,6 +26,10 @@ html, body {
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 15px;
+  position: relative;
+  top:10px;
+  left:60px;
+  border-radius: 12px;
 }
 .form {
   display: flex;
@@ -32,6 +37,7 @@ html, body {
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
+  
 }
 .searchProduct {
   width:85px;
@@ -40,6 +46,7 @@ html, body {
   border: 1.5px solid #E9ECEF;
   border-radius: 12px;
   font-size:12px;
+  
 }
 .userUrl {
     padding-top: 05px;
@@ -62,15 +69,15 @@ html, body {
 }
 
 .filterButtons {
-  display: flex;
+  width: 100%;
+  position: relative;
+  left: 18px;
+  white-space:nowrap;
+  overflow-x: scroll;
   flex-direction: row;
-  gap: 2px;
-  justify-items: center;
-  align-items: center;
-  padding-top: 25px;
-  padding-bottom: 15px;
-  justify-content: space-evenly;
-  padding-right: 10px;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 button {
   cursor: pointer;
@@ -82,7 +89,6 @@ button {
   background: #FF2253;
   border: 1.5px solid #FF2253;
   border-radius: 15px;
-  width: 150px;
   height: 15px;
   font-size: 10px;
   color: white;
@@ -237,6 +243,7 @@ button {
   font-weight: 500;
   border: 1.5px solid #FFF7F4;
   border-radius: 15px;
+  padding-left: 25px;
 }
 
 .fruits {
@@ -249,6 +256,7 @@ button {
   font-weight: 500;
   border: 1.5px solid #FFF1F4;
   border-radius: 15px;
+  padding-left: 25px;
 }
 
 .drink {
@@ -261,6 +269,7 @@ button {
   font-weight: 500;
   border: 1.5px solid #F3EEF5;
   border-radius: 15px;
+  padding-left: 25px;
 }
 
 .addNewProduct {
@@ -270,6 +279,9 @@ button {
   border: 1.5px solid #FF2253;
   border-radius: 15px;
   color: #F8F9FA;
+  display: flex;
+  float: right;
+  margin-top: 32px;
 }
 .subTitle {
   display: flex;
@@ -282,6 +294,13 @@ button {
   justify-content: space-evenly;
   align-items: center;
   padding: 15px;
+}
+.nomes{
+  align-items: center;
+  width: 110%;
+  display: flex;
+  justify-content: space-between;
+  margin-left:18%;
 }
 .photo{
   width: 32px;
@@ -342,7 +361,7 @@ button {
   justify-content: center;
   font-size: 9px;
 }
-.searchIcon{
+#search-icon{
   width: 10px;
   height: 10px;
 }
@@ -390,7 +409,7 @@ button {
 li {
   display: flex;
   flex-direction: row;
-  width: 94%;
+  width: 110%;
   height: 35%;
   list-style: none;
   flex-wrap: nowrap;
@@ -399,6 +418,7 @@ li {
   border: 1px solid #E9ECEF;
   border-radius: 12px;
 }
+
 
 /* Style para dispositivo com tamanho acima de 768px  */
 
@@ -547,7 +567,7 @@ li {
   }
   .product {
     display: flex;
-    justify-content:flex-start;
+    
     background: #FFFFFF;
     border: 1px solid #E9ECEF;
     border-radius: 12px;  
@@ -558,6 +578,8 @@ li {
   }
   li{
     margin-bottom: 40px;
+    width: 100%;
+    justify-content:flex-start;
   }
   h3 {
     font-size: 14px;
@@ -606,6 +628,7 @@ li {
     width:20%;
     justify-content: space-between;
     align-items: center;
+    margin-left: 5px;
    
   }
 
@@ -769,7 +792,8 @@ li {
     justify-content: space-evenly;
     width: 100%;
     padding: 4px;
-    height: 170px;
+    height: auto;
+
   }
   #li {
     display: flex;
