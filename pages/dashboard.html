@@ -43,10 +43,20 @@
       </button>
     </div>
 
-    <div class="add">
-      <button id="modalAddProduct" class="addNewProduct">
-        Adicionar novo produto
-      </button>
+    <button class="addNewProduct">Adicionar novo produto</button>
+
+    <div class="subTitle">
+      <h3>Produto</h3>
+      <h3>Categorias</h3>
+      <h3>Descrição</h3>
+      <h3>Ações</h3>
+    </div>
+
+    <main>
+      <ul id="productsList"></ul>
+    </main>
+
+    <div class="add" class="modal">
       <div id="addModal" class="addProductBackgroundModalStyle">
         <div class="modalAddProduct">
           <t class="registerProduct">Cadastro de Produto</t>
@@ -101,18 +111,6 @@
         </div>
       </div>
     </div>
-    -->
-
-    <div class="subTitle">
-      <h3>Produto</h3>
-      <h3>Categorias</h3>
-      <h3>Descrição</h3>
-      <h3>Ações</h3>
-    </div>
-
-    <main>
-      <ul id="productsList"></ul>
-    </main>
 
     <script type="module" src="../scripts/dashboard.js"></script>
     <script type="module" src="../scripts/models/header.js"></script>

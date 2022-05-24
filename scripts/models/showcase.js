@@ -125,7 +125,7 @@ class ShowCase {
     drinks.addEventListener("click", ShowCase.sectionFilter);
 
     const searchField = document.getElementById("Search");
-    searchField.addEventListener("keypress", ShowCase.wordSearch);
+    searchField.addEventListener("keyup", ShowCase.wordSearch);
 
     const cartOpenBtn = document.getElementById("tileCar");
     const cartCloseBtn = document.getElementById("cart-close");

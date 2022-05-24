@@ -10,23 +10,25 @@ class MyProducts {
   static products(response) {
     const ul = document.getElementById("productsList");
     ul.innerHTML = "";
+
     response.forEach((product) => {
       const li = document.createElement("li");
-      const div = document.createElement("div");
-      div.classList.add("product");
       const img = document.createElement("img");
-      img.setAttribute("class", "photo");
       const h3 = document.createElement("h3");
       const divn = document.createElement("div");
-      divn.setAttribute("class", "nomes");
       const p = document.createElement("p");
       const pd = document.createElement("p");
       const divB = document.createElement("div");
-      divB.setAttribute("id", "actions");
       const buttonE = document.createElement("img");
-      buttonE.setAttribute("id", "btnEdit");
       const buttonD = document.createElement("img");
+      li.classList.add("product");
+      img.setAttribute("class", "photo");
+      divn.setAttribute("class", "nomes");
+      divB.setAttribute("id", "actions");
+      buttonE.setAttribute("id", "btnEdit");
       buttonD.setAttribute("id", "btnDelete");
+      p.setAttribute("class", "category");
+      pd.setAttribute("class", "detail");
 
       buttonE.addEventListener("click", (event) => {
         event.preventDefault();
@@ -46,15 +48,13 @@ class MyProducts {
       buttonE.src = "/images/EDIT.svg";
       buttonD.src = "/images/trash.svg";
 
-      div.appendChild(divn);
-      div.appendChild(p);
-      div.appendChild(pd);
+      li.appendChild(divn);
+      li.appendChild(p);
+      li.appendChild(pd);
       divB.appendChild(buttonE);
       divB.appendChild(buttonD);
 
-      div.appendChild(divB);
-
-      li.appendChild(div);
+      li.appendChild(divB);
 
       ul.appendChild(li);
     });
