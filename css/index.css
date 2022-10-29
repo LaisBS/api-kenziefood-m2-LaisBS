@@ -1,23 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
-h1, h2, h3, p, caption {
-  font-family:'Poppins', sans-serif;
+h1,
+h2,
+h3,
+p,
+caption {
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
-    font-size:21px;
-    color: #212529;
+  font-size: 21px;
+  color: #212529;
 }
 
 h2 {
-    font-size:16px;
-    color: #FF2253;
+  font-size: 16px;
+  color: #ff2253;
 }
 
 #logo {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 #title {
@@ -29,27 +33,28 @@ h2 {
 }
 
 #menu button {
-  background-color: #F8F9FA;
-  border: #F8F9FA 1.5px solid;
+  background-color: #f8f9fa;
+  border: #f8f9fa 1.5px solid;
   color: #212529;
   padding: 5px;
   border-radius: 15px;
-  font-family:'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 5px;
+  cursor: pointer;
 }
 
 #menu button:active {
-  background-color: #FF2253;
-  border: #FF2253 1.5px solid;
-  color: #F8F9FA;
+  background-color: #ff2253;
+  border: #ff2253 1.5px solid;
+  color: #f8f9fa;
 }
 
 #search-area {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E9ECEF;
-  border: 1.5px solid #E9ECEF;
+  background-color: #e9ecef;
+  border: 1.5px solid #e9ecef;
   border-radius: 12px;
   margin: 10px;
 }
@@ -60,7 +65,7 @@ h2 {
 }
 
 #Search {
-  background-color: #E9ECEF;
+  background-color: #e9ecef;
   font-size: 16px;
   width: 90%;
   padding: 10px;
@@ -70,8 +75,8 @@ h2 {
   display: flex;
   gap: 10px;
   width: 90%;
-  margin: auto;
-  white-space:nowrap;
+  margin: 5vw;
+  white-space: nowrap;
   overflow-x: scroll;
 }
 
@@ -79,9 +84,9 @@ h2 {
   width: 0;
 }
 
-#top img{
-    width: 20px;
-    height: 20px;
+#top img {
+  width: 20px;
+  height: 20px;
 }
 
 #top button {
@@ -92,36 +97,59 @@ h2 {
   font-size: 16px;
 }
 
-.Bakery, .Fruits, .Drinks, .All{
-  background-color: #FFF7F4;
-  border: 1.5px solid #FFF7F4;
-  color: #212529  ;
+.Bakery,
+.Fruits,
+.Drinks,
+.All {
+  background-color: #fff7f4;
+  border: 1.5px solid #fff7f4;
+  color: #212529;
+  cursor: pointer;
 }
 
-.Bakery:hover, .Fruits:hover, .Drinks:hover, .All:hover{
-  background-color: #FF2253;
-  color: #F8F9FA;
-  border: 1.5px solid #FF2253;
+.Bakery:hover,
+.Fruits:hover,
+.Drinks:hover,
+.All:hover {
+  background-color: #ff2253;
+  color: #f8f9fa;
+  border: 1.5px solid #ff2253;
 }
 
 #botao-ativo {
-  background-color: #FF2253;
-  color: #F8F9FA;
-  border: 1.5px solid #FF2253;
+  background-color: #ff2253;
+  color: #f8f9fa;
+  border: 1.5px solid #ff2253;
 }
 
-main{
-  overflow-x: scroll;
-  margin: 10px auto;
-  width: 90%;
-  height: 420px;
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main #footer {
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  align-items: center;
+}
+
+main #footer button {
+  height: 7vh;
+  width: 22vw;
+  max-width: 120px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: #ff2253;
+  color: white;
 }
 
 #list-products {
   display: flex;
-  width: 100%;
-  height: 100%;
-  gap: 15px;
+  gap: 5vw;
+  overflow-x: scroll;
+  margin-left: 5vw;
 }
 
 .preview-product {
@@ -133,63 +161,67 @@ main{
 
 .preview-product .photo {
   width: 280px;
-  height: 200px ;
+  height: 200px;
 }
 
 #list-products h3 {
-    font-weight: 500;
-    font-size: 16px;
-    color:black;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
 }
 
-.preview-product p, span {
-    color: #868E96;
-    font-size: 14px;
-    text-overflow:ellipsis;
+.preview-product p,
+span {
+  color: #868e96;
+  font-size: 14px;
+  text-overflow: ellipsis;
 }
 
 .preview-product p {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cart_price {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
 .cart_price p {
-    font-weight: 500;
-    font-size: 14px;
-    color:#212529;
+  font-weight: 500;
+  font-size: 14px;
+  color: #212529;
 }
 
 .purchaseButton {
-  background-color: #E4F7EF;
+  background-color: #e4f7ef;
   border-radius: 50%;
-  border:none;
+  border: none;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
 }
 
-.cartIcon{
+.cartIcon {
   width: 20px;
   height: 20px;
-  filter: invert(50%) sepia(43%) saturate(3926%) hue-rotate(131deg) brightness(90%) contrast(91%);
+  filter: invert(50%) sepia(43%) saturate(3926%) hue-rotate(131deg)
+    brightness(90%) contrast(91%);
 }
 
 .purchaseButton:hover .cartIcon {
   filter: none;
+  cursor: pointer;
 }
 
 .purchaseButton:hover {
-  background-color: #0CA678;
+  background-color: #0ca678;
+  cursor: pointer;
 }
 
 /* Cart CSS */
@@ -198,14 +230,15 @@ main{
   height: 10%;
   justify-content: center;
   align-items: center;
-  background-color: #FF2253;
+  background-color: #ff2253;
   padding: 10px;
   gap: 10px;
   border-radius: 20px;
+  margin-top: 3vh;
 }
 
 #tileCar h4 {
-  font-family:'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
 }
 
@@ -239,10 +272,10 @@ main{
   align-items: center;
   height: 10%;
   padding: 20px;
-  background-color: #FF2253;
+  background-color: #ff2253;
 }
 
-#cart-header h2{
+#cart-header h2 {
   color: white;
 }
 
@@ -258,14 +291,14 @@ main{
 }
 
 #boxCart {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-y: scroll;
-    padding: 0 15px;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 0 15px;
 }
 
 #cartItens {
@@ -292,15 +325,16 @@ main{
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap:5px;
+  gap: 5px;
 }
 
 #empyt-cart {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #868E96;
-  font-family:'Poppins', sans-serif;
+  color: #868e96;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 #container-purchase {
@@ -314,18 +348,18 @@ main{
 #container-purchase p {
   font-weight: 500;
   font-size: 12px;
-  color:#000000;
+  color: #000000;
 }
 
-#Quanti{
+#Quanti {
   display: flex;
   justify-content: space-between;
   padding: 15px 18px;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   width: 100%;
 }
 
-#Price{
+#Price {
   display: flex;
   justify-content: space-between;
   padding: 15px 18px;
@@ -339,7 +373,7 @@ main{
 .carItem h3 {
   font-weight: 500;
   font-size: 14px;
-  color:#000000;
+  color: #000000;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -352,11 +386,15 @@ main{
 
 .price {
   font-size: 14px;
-  color:#212529;
+  color: #212529;
 }
 
-.hidden{
+.hidden {
   display: none;
+}
+
+.trash {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 900px) {
@@ -366,6 +404,24 @@ main{
     padding: 0 5%;
     margin: auto;
     box-shadow: 0 0 40px -18px;
+  }
+
+  #menu button {
+    padding: 10px;
+    background-color: #ff2253;
+    color: white;
+  }
+
+  #menu button:hover {
+    background-color: pink;
+    border: 2px solid #ff2253;
+    color: #ff2253;
+  }
+
+  main #footer button:hover {
+    background-color: pink;
+    border: 2px solid #ff2253;
+    color: #ff2253;
   }
 
   #search-area {
@@ -385,8 +441,10 @@ main{
 
   #list-products {
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0;
+    /* justify-content: space-between;
+    gap: 0; */
+    overflow-x: none;
+    margin-left: 0;
   }
 
   .preview-product {
@@ -398,10 +456,11 @@ main{
     position: fixed;
     top: 0;
     width: 300px;
-    height: 50px;
+    height: 10vh;
     border-radius: 10px 10px 0 0;
     top: calc(5% + 75px);
     right: 5%;
+    z-index: 1;
   }
 
   #cart-modal {
@@ -445,5 +504,3 @@ main{
     width: 0;
   }
 }
-
-

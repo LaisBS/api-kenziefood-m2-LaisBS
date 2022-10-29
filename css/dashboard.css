@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;700&display=swap");
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -12,55 +13,61 @@ html, body {
 }
 
 #title {
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 90%;
-margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50vw;
+  flex-wrap: wrap;
 }
 
 #menu button {
-background-color: #F8F9FA;
-border: #F8F9FA 1.5px solid;
-color: #212529;
-padding: 5px;
-border-radius: 15px;
-font-family:'Poppins', sans-serif;
-margin: 5px;
+  background-color: #f8f9fa;
+  border: #f8f9fa 1.5px solid;
+  color: #212529;
+  padding: 5px;
+  border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+  margin: 5px;
+  padding: 10px;
 }
 
-#menu button:active {
-background-color: #FF2253;
-border: #FF2253 1.5px solid;
-color: #F8F9FA;
+#menu button:hover {
+  background-color: #ff2253;
+  border: #ff2253 1.5px solid;
+  color: #f8f9fa;
 }
-
 
 .header {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   gap: 4px;
   flex-direction: row;
+  height: 15vh;
 }
-.filterButtons img{
-  width: 10px;
-  height: 10px;
-  position: relative;
-  left: 30px;
 
+#addButtons {
+  white-space: nowrap;
+  overflow-x: scroll;
+  flex-direction: row;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 90vw;
+  gap: 5vw;
+}
+.filterButtons img {
+  width: 20px;
+  height: 20px;
 }
 .containerSearch {
-  background: #E9ECEF;
+  background: #e9ecef;
   display: flex;
   float: right;
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 15px;
-  position: relative;
-  top:10px;
-  left:60px;
   border-radius: 12px;
 }
 .form {
@@ -69,64 +76,43 @@ color: #F8F9FA;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
-
 }
 .searchProduct {
-  width:85px;
+  width: 30vw;
   height: 25px;
-  background: #E9ECEF;
-  border: 1.5px solid #E9ECEF;
+  background: #e9ecef;
+  border: 1.5px solid #e9ecef;
   border-radius: 12px;
-  font-size:12px;
-
+  font-size: 12px;
 }
 .userUrl {
-    padding-top: 05px;
-    width: 25px;
-    height: 25px;
-    border-radius: 20%;
-    padding-left: 3px;
-  }
+  padding-top: 05px;
+  width: 25px;
+  height: 25px;
+  border-radius: 20%;
+  padding-left: 3px;
+}
 .h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 19px;
   padding-left: 10px;
   font-weight: 700;
 }
 .h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
-  color: #FF2253;;
+  color: #ff2253;
   padding-right: 8%;
 }
 
 .filterButtons {
-  width: 100%;
-  position: relative;
-  left: 18px;
-  white-space:nowrap;
-  overflow-x: scroll;
-  flex-direction: row;
-  display: inline-flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+  align-items: center;
 }
 button {
   cursor: pointer;
-}
-.allProducts {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  background: #FF2253;
-  border: 1.5px solid #FF2253;
-  border-radius: 15px;
-  height: 15px;
-  font-size: 10px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .addProductBackgroundModalStyle {
   width: 100%;
@@ -162,7 +148,7 @@ button {
 .modalAddProduct {
   width: 70%;
   height: 70%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 8px 8px 8px 8px;
   margin: 90px auto 0 auto;
   transition: 350ms;
@@ -171,7 +157,7 @@ button {
 .modalEditProduct {
   width: 70%;
   height: 70%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 8px 8px 8px 8px;
   margin: 90px auto 0 auto;
   transition: 350ms;
@@ -180,7 +166,7 @@ button {
 .modalDeleteProduct {
   width: 70%;
   height: 30%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 8px 8px 8px 8px;
   margin: 90px auto 0 auto;
   transition: 350ms;
@@ -190,14 +176,14 @@ button {
   padding-left: 5px;
 }
 .registerProduct {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   padding: 11px;
 }
 .newProduct {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -212,129 +198,178 @@ button {
 }
 .acceptProduct {
   color: white;
-  background: #FF2253;
-  border: 1.5px solid #FF2253;
+  background: #ff2253;
+  border: 1.5px solid #ff2253;
   border-radius: 32px;
   width: 210px;
-  height: 25px;
+  height: 8vh;
 }
 .registerProduct {
   padding: 8px;
 }
 .deleteProduct {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   padding: 12px;
   right: 65%;
 }
 .confirmDelete {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-size: 12px;
-  background: #F8F9FA;
-  border: 1.5px solid #F8F9FA;
+  background: #f8f9fa;
+  border: 1.5px solid #f8f9fa;
   border-radius: 32px;
   padding: 10px;
 }
 .changes {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-size: 12px;
-  background: #F8F9FA;
-  border: 1.5px solid #F8F9FA;
+  background: #f8f9fa;
+  border: 1.5px solid #f8f9fa;
   border-radius: 32px;
 }
 .inputProduct {
-  background-color: #DEE2E6;
+  background-color: #dee2e6;
   border-radius: 10px;
-  width: 200px;
-  height: 25px;
+  width: 65vw;
+  height: 8vh;
   padding-left: 13px;
 }
 .categoriesProducts {
-  background: #F8F9FA;
-  border: 1.5px solid #F8F9FA;
+  background: #f8f9fa;
+  border: 1.5px solid #f8f9fa;
   border-radius: 32px;
-  color: #868E96;
+  color: #868e96;
   padding: 5px;
 }
 .span {
   float: right;
   font-size: 14px;
   margin-right: 8px;
-  color: #868E96;
+  color: #868e96;
   cursor: pointer;
+}
+
+#novoproduto {
+  margin-top: 10px;
+}
+
+.allProducts {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  background: #fff7f4;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #fff7f4;
+  width: 170px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .bread {
   display: flex;
   align-items: center;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  background: #FFF7F4;
+  font-family: "Inter", sans-serif;
+  background: #fff7f4;
   font-weight: 500;
-  border: 1.5px solid #FFF7F4;
+  border: 1.5px solid #fff7f4;
   border-radius: 15px;
   padding-left: 25px;
+  width: 170px;
+  height: 48px;
+  justify-content: space-evenly;
+  font-size: 16px;
 }
 
 .fruits {
   display: flex;
   align-items: center;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  background: #FFF1F4;
+  font-family: "Inter", sans-serif;
+  background: #fff1f4;
   font-style: normal;
   font-weight: 500;
-  border: 1.5px solid #FFF1F4;
+  border: 1.5px solid #fff1f4;
   border-radius: 15px;
   padding-left: 25px;
+  width: 170px;
+  height: 48px;
+  justify-content: space-evenly;
+  font-size: 16px;
 }
 
 .drink {
   display: flex;
   align-items: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 10px;
-  background: #F3EEF5;
+  background: #f3eef5;
   font-style: normal;
   font-weight: 500;
-  border: 1.5px solid #F3EEF5;
+  border: 1.5px solid #f3eef5;
   border-radius: 15px;
   padding-left: 25px;
+  width: 170px;
+  height: 48px;
+  justify-content: space-evenly;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.drink:focus,
+.fruits:focus,
+.bread:focus,
+.allProducts:focus {
+  background-color: #ff2253;
+  border: 1.5px solid #ff2253;
+  color: white;
+}
+
+.drink:hover,
+.fruits:hover,
+.bread:hover,
+.allProducts:hover {
+  background-color: #ff2253;
+  border: 1.5px solid #ff2253;
+  color: white;
 }
 
 .addNewProduct {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 10px;
-  background: #FF2253;
-  border: 1.5px solid #FF2253;
+  background: #ff2253;
+  border: 1.5px solid #ff2253;
   border-radius: 15px;
-  color: #F8F9FA;
+  color: #f8f9fa;
   display: flex;
-  float: right;
-  margin-top: 32px;
+  height: 40px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
 }
 .subTitle {
   display: flex;
   flex-direction: row;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 10px;
-  color: #868E96;
-  justify-content: space-evenly;
+  color: #868e96;
+  justify-content: space-around;
   align-items: center;
   padding: 15px;
 }
-.nomes{
+.nomes {
   align-items: center;
-  width: 110%;
   display: flex;
-  justify-content: space-between;
-  margin-left:18%;
+  justify-content: space-evenly;
 }
-.photo{
+.photo {
   width: 32px;
   height: 32px;
   border-radius: 150px;
@@ -343,40 +378,39 @@ button {
   margin-bottom: 15px;
 }
 .h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: #212529;
   font-size: 10px;
 }
 .paragraph1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
-  color: #868E96;
-
+  color: #868e96;
 }
 .paragraph2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
-  color: #868E96;
+  color: #868e96;
   padding-left: 5px;
 }
 
 .paragraph3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
-  color: #868E96;
+  color: #868e96;
   padding-left: 5px;
 }
 
 .edit {
-  color: #868E96;
+  color: #868e96;
   width: 13px;
   height: 13px;
   display: flex;
@@ -385,7 +419,7 @@ button {
   font-size: 9px;
 }
 .delete {
-  color: #868E96;
+  color: #868e96;
   width: 13px;
   height: 13px;
   display: flex;
@@ -393,44 +427,33 @@ button {
   justify-content: center;
   font-size: 9px;
 }
-#search-icon{
+#search-icon {
   width: 10px;
   height: 10px;
 }
-.breadIcon {
-  width: 10px;
-  height: 10px;
-}
-.fruitIcon {
-  width: 10px;
-  height: 10px;
-}
-.drinkIcon {
-  width: 10px;
-  height: 10px;
-}
+
 #bakery {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 10px;
   border: none;
   box-shadow: 0 0 0 0;
   outline: 0;
-  background: #FFF7F4;
+  background: #fff7f4;
 }
 #fruits {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 10px;
   border: none;
   box-shadow: 0 0 0 0;
   outline: 0;
 }
-#drink{
-  font-family: 'Inter', sans-serif;
+#drink {
+  font-family: "Inter", sans-serif;
   font-size: 10px;
   border: none;
   box-shadow: 0 0 0 0;
   outline: 0;
-  background: #FFF7F4;
+  background: #fff7f4;
 }
 #productsList {
   display: block;
@@ -438,61 +461,81 @@ button {
   height: 15%;
   padding: 4px;
 }
-li {
+.product {
   display: flex;
-  flex-direction: row;
-  width: 110%;
-  height: 35%;
-  list-style: none;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  border: 1px solid #E9ECEF;
-  border-radius: 12px;
+  border: dashed gray;
+  margin-bottom: 10px;
 }
 
+.categoriesProducts:focus {
+  background-color: #ff2253;
+  color: #dee2e6;
+}
 
+#select {
+  width: 65vw;
+  height: 5vh;
+  margin-left: 5px;
+  background: #dee2e6;
+  border-radius: 5px;
+  border: solid 2px #dee2e6;
+  color: rgb(118, 118, 118);
+}
+
+#actions {
+  width: 20vw;
+  display: flex;
+  justify-content: space-around;
+  height: 5vh;
+}
 /* Style para dispositivo com tamanho acima de 768px  */
 
- @media screen and (min-width: 768px) {
-  html, body {
+@media screen and (min-width: 768px) {
+  html,
+  body {
     width: 100%;
     height: 100%;
   }
+  #select {
+    width: 26vw;
+    height: 5vh;
+  }
   .header {
-    padding-top: 20px;
-    padding-left: 20px;
     gap: 7px;
-    height: 72px;
-   }
+    height: 15vh;
+    display: flex;
+  }
+  #title {
+    justify-content: space-evenly;
+  }
   .h1 {
-    font-size:23px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 700;
     padding-left: 5%;
   }
   .h2 {
     padding: 2px;
-    font-size:17px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 700;
   }
-  #search-icon{
+  #search-icon {
     width: 20px;
     height: 20px;
-    position:relative;
+    position: relative;
     left: 32px;
     z-index: 1;
   }
   .containerSearch {
     display: flex;
-    justify-content: flex-end;
     background-color: #fcfcfc;
-    height: 40px;
-    width: 80%;
-
+    width: 50vw;
+    justify-content: space-around;
   }
   .userUrl {
     padding-top: 05px;
@@ -501,7 +544,7 @@ li {
     border-radius: 30%;
   }
   .searchProduct {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -513,60 +556,11 @@ li {
     padding: 15px 18px 15px 50px;
   }
   .filterButtons {
-    width: 100%;
-    white-space: nowrap;
-    overflow-x: hidden;
     display: flex;
-    justify-content: flex-start;
-    margin-left: 115px;
-    gap:28px;
-    text-align: center;
-
-
-}
-.filterButtons img{
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: 70px;
-}
-  .allProducts {
-    background-color: #FF2253;
-    color: #F8F9FA;
-    width: 88px;
-    height: 48px;
-    border: 1.5px solid #FF2253;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: 16px;
-
+    justify-content: space-around;
+    margin: 0;
+    flex-direction: row;
   }
-  .bread,.fruits,.drink{
-    background-color: #FFF1F4;
-    width: 170px;
-    height: 48px;
-    border: 1.5px solid #FFF1F4;
-    border-radius: 32px;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-  }
-  .bread {
-    box-shadow: 0 0 0 0;
-    outline: 0;
-    background: #FFF7F4;
-  }
-  .drink {
-    background: #F3EEF5;
-
-  }
-  .fruits {
-   background: #FFF1F4;
-   border: 1.5px solid #FFF1F4;
-  }
-
   .addNewProduct {
     display: flex;
     align-items: center;
@@ -574,53 +568,53 @@ li {
     float: right;
     width: 210px;
     height: 50px;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    border: 1.5px solid #FF2253;
+    border: 1.5px solid #ff2253;
     border-radius: 32px;
-    position: relative;
-    bottom: 60px;
-    left:-8%;
+  }
+
+  #addButtons {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+  #novoproduto {
+    display: flex;
   }
   .subTitle {
-    padding-right: 10%;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    gap: 330px;
-    margin-left: 220px;
   }
-  main{
+  main {
     margin-left: 70px;
     margin-right: 80px;
   }
   .product {
-    display: flex;
-
-    background: #FFFFFF;
-    border: 1px solid #E9ECEF;
-    border-radius: 12px;
-    padding-bottom: 5px;
+    background: #ffffff;
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    flex-direction: row;
   }
-  li{
+  li {
     margin-bottom: 40px;
     width: 100%;
-    justify-content:flex-start;
+    justify-content: flex-start;
   }
   h3 {
     font-size: 14px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
   }
   .h3 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -629,7 +623,7 @@ li {
   .paragraph1 {
     display: flex;
     font-size: 14px;
-    background: #F8F9FA;
+    background: #f8f9fa;
     border-radius: 8px;
 
     align-items: center;
@@ -646,22 +640,22 @@ li {
     gap: 15px;
     padding-right: 60px;
   }
-  #actions{
+  #actions {
     display: flex;
     width: 60px;
     justify-content: space-between;
   }
-  #btnEdit,#btnDelete{
-    width:20px;
+  .btnEdit,
+  .btnDelete {
+    width: 20px;
     height: 20px;
+    cursor: pointer;
   }
-  .nomes{
+  .nomes {
     display: flex;
-    width:20%;
-    justify-content: space-between;
+    width: 20%;
+    justify-content: space-evenly;
     align-items: center;
-    margin-left: 5px;
-
   }
 
   /* Style modal add produto */
@@ -678,17 +672,17 @@ li {
   .modalAddProduct {
     display: block;
     width: 30%;
-    height: 95%;
-    background: #FFFFFF;
+    height: 90%;
+    background: #ffffff;
     border-radius: 8px 8px 8px 8px;
     margin: 90px auto 0 auto;
     transition: 350ms;
     top: -10%;
-    padding-top: 7px;
+    padding: 15px;
     position: relative;
   }
   .registerProduct {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-size: 14px;
     padding: 10px;
@@ -697,7 +691,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #E9ECEF;
+    background: #e9ecef;
     border-radius: 4px;
     width: 25px;
     height: 25px;
@@ -707,19 +701,20 @@ li {
     padding-top: 30px;
   }
   .inputProduct {
-    width:420px;
-    height: 60px;
-    background: #F8F9FA;
+    width: 26vw;
+    height: 8vh;
+    background: #dee2e6;
   }
   .categoriesProducts {
     gap: 105px;
     width: 100px;
     height: 35px;
   }
-  .categoriesProducts:hover{
-    background-color: #FF2253;
-    color: #DEE2E6;
+  .categoriesProducts:hover {
+    background-color: #ff2253;
+    color: #dee2e6;
   }
+
   .categoriesAll {
     display: flex;
     align-items: center;
@@ -736,7 +731,9 @@ li {
   .acceptProduct {
     width: 350px;
     height: 50px;
+    margin-top: 5px;
   }
+
   /* Style modal editar produto */
   .editProductBackgroundModalStyle {
     width: 100%;
@@ -752,7 +749,7 @@ li {
     display: block;
     width: 23%;
     height: 85%;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 8px 8px 8px 8px;
     margin: 90px auto 0 auto;
     transition: 350ms;
@@ -782,7 +779,7 @@ li {
     display: block;
     width: 20%;
     height: 30%;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 8px 8px 8px 8px;
     margin: 90px auto 0 auto;
     transition: 350ms;
@@ -798,11 +795,11 @@ li {
     gap: 70px;
   }
   .confirmDelete {
-    color: #868E96;
+    color: #868e96;
     width: 150px;
     height: 60px;
   }
-  .searchIcon{
+  .searchIcon {
     width: 30px;
     height: 30px;
   }
@@ -813,7 +810,6 @@ li {
   .fruitIcon {
     width: 30px;
     height: 30px;
-
   }
   .drinkIcon {
     width: 30px;
@@ -825,7 +821,6 @@ li {
     width: 100%;
     padding: 4px;
     height: auto;
-
   }
   #li {
     display: flex;
@@ -835,9 +830,8 @@ li {
     height: 50px;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid #E9ECEF;
+    border: 1px solid #e9ecef;
     border-radius: 12px;
     padding: 20px;
   }
-
- }
+}

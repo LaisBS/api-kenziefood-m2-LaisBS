@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 main {
   display: flex;
@@ -8,22 +8,24 @@ main {
   background-color: white;
   margin: 50px auto;
   border-radius: 10px;
-  border: #FFE9EE 5px solid;
+  border: #ffe9ee 5px solid;
 }
 
 main:hover {
-  border: #FF2253 5px solid;
+  border: #ff2253 5px solid;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   color: #212529;
   padding: 10px 5px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-h2, a {
-  color: #FF2253;
+h2,
+a {
+  color: #ff2253;
   font-weight: bold;
 }
 
@@ -47,15 +49,15 @@ input {
   border-radius: 5px;
   width: 90%;
   max-width: 250px;
-  background-color: #F8F9FA;
-  border: #DEE2E6 1.5px solid;
-  color: #868E96;
+  background-color: #f8f9fa;
+  border: #dee2e6 1.5px solid;
+  color: #868e96;
 }
 
 input:hover {
-  background-color: #E9ECEF;
-  border: #DEE2E6 1.5px solid;
-  color: #868E96;
+  background-color: #e9ecef;
+  border: #dee2e6 1.5px solid;
+  color: #868e96;
 }
 
 input:focus {
@@ -71,28 +73,26 @@ p {
 }
 
 #btnLogin {
-  background-color: #F8F9FA;
-  border: #F8F9FA 1.5px solid;
+  background-color: #f8f9fa;
+  border: #f8f9fa 1.5px solid;
   color: #212529;
   width: 70%;
   max-width: 200px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 #btnLogin:active {
-  background-color: #FF2253;
-  border: #FF2253 1.5px solid;
-  color: #F8F9FA;
+  background-color: #ff2253;
+  border: #ff2253 1.5px solid;
+  color: #f8f9fa;
 }
-
-
-
 
 @media (min-width: 1024px) {
   #btnLogin:hover {
-    background-color: #FF2253;
-    border: #FF2253 1.5px solid;
-    color: #F8F9FA;
+    background-color: #ff2253;
+    border: #ff2253 1.5px solid;
+    color: #f8f9fa;
   }
 
   #btnLogin:active {

@@ -1,73 +1,58 @@
-import ProductsController from "/scripts/controllers/products-controller.js"
+import ProductsController from "/scripts/controllers/products-controller.js";
 
+class createProduct {
+  static create() {
+    const nameField = document.getElementById("name");
 
+    const descField = document.getElementById("description");
 
-class createProduct{
-    
-    static create(){
-       
-        let nameField=document.getElementById("name")
-        console.log(nameField.value)
-        let descField=document.getElementById("description")
-        console.log(descField.value)
+    const valor = document.getElementById("pricess");
 
-        let category1=document.getElementById("1")
+    const link = document.getElementById("link");
 
-        let category2=document.getElementById("2")
-    
-        let category3=document.getElementById("3")
-
-        let valor=document.getElementById("pricess")
-        
-        let link=document.getElementById("link")
-        
-
-        
-        return ProductsController.createProduct(
-            {
-                nome: nameField.value,
-                preco: valor.value,
-                categoria: category1.innerText,
-                imagem: link.value,
-                descricao : descField.value
-            }
-            
-        )
-     }
+    const select = document.getElementById("select");
+    return ProductsController.createProduct({
+      nome: nameField.value,
+      preco: valor.value,
+      categoria: select.value,
+      imagem: link.value,
+      descricao: descField.value,
+    });
+  }
 }
-const btnCadas=document.getElementById("accept")
-btnCadas.addEventListener("click",createProduct.create)
 
-const buttonAdd = document.getElementById("modalAddProduct")
-const modalAdd = document.getElementById("addModal")
-const xAdd = document.getElementById("closeAddModal")
-buttonAdd.addEventListener("click", function(){
-    modalAdd.style.display = "block"
-    let category1=document.getElementById("1")
-        category1.addEventListener("click", function(){
-            category1.style.backgroundColor= "#FF2253"
-            category1.style.color="#DEE2E6"
-        }
-        )
-        let category2=document.getElementById("2")
-        category2.addEventListener("click", function(){
-            category2.style.backgroundColor= "#FF2253"
-            category2.style.color="#DEE2E6"
-        }
-        )
-        let category3=document.getElementById("3")
-        category3.addEventListener("click", function(){
-        category3.style.backgroundColor= "#FF2253"
-        category3.style.color="#DEE2E6"
-    }
-    )
-})  
+const btnCadas = document.getElementById("accept");
+btnCadas.addEventListener("click", clickHandler);
 
+function clickHandler() {
+  if (btnCadas.innerHTML === "Adicionar produto") {
+    createProduct.create();
+  }
+}
 
+const buttonAdd = document.getElementById("modalAddProduct");
+const modalAdd = document.getElementById("addModal");
+const xAdd = document.getElementById("closeAddModal");
+const title = document.getElementsByClassName("registerProduct");
+const btnCriar = document.getElementById("accept");
 
+buttonAdd.addEventListener("click", function () {
+  title[0].innerHTML = "Criar produto";
+  btnCriar.innerHTML = "Adicionar produto";
+
+  const nameField = document.getElementById("name");
+  nameField.value = "";
+  const descField = document.getElementById("description");
+  descField.value = "";
+  const valor = document.getElementById("pricess");
+  valor.value = "";
+  const link = document.getElementById("link");
+  link.value = "";
+  const select = document.getElementById("select");
+
+  modalAdd.style.display = "block";
+});
 
 xAdd.addEventListener("click", () => {
-  modalAdd.style.display = "none"
-  
-})
-
+  modalAdd.style.display = "none";
+});

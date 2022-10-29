@@ -1,100 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
-</head>
-<body>
-  <header class="header">
-    <div id="title">
-      <div id="logo">
-        <h1 class="h1">Kenzie</h1>
-        <h2 class="h2">Food</h2>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div id="title">
+        <div id="logo">
+          <h1 class="h1">Kenzie</h1>
+          <h2 class="h2">Food</h2>
+        </div>
+
+        <nav id="menu"></nav>
       </div>
 
-      <nav id="menu">
+      <div class="containerSearch">
+        <form class="form" action="">
+          <img src="/images/pequisar.png" id="search-icon" />
+          <input
+            type="text"
+            placeholder="Pesquisar por produto"
+            class="searchProduct"
+          />
+        </form>
+        <img class="userUrl" src="/images/perfil vazio.png" alt="Foto perfil" />
+      </div>
+    </header>
 
-      </nav>
-    </div>
-    <!-- <h1 class="h1">Kenzie</h1>
-    <h2 class="h2">Food</h2> -->
+    <section class="filterButtons">
+      <div id="addButtons">
 
-    <div class="containerSearch">
-      <form class="form" action="">
-        <img src="/images/pequisar.png" id="search-icon">
-        <input type="text" placeHolder="Pesquisar por produto" class="searchProduct">
-      </form>
-        <img class="userUrl" src="/images/perfil vazio.png" alt="Foto perfil">
-    </div>
-  </header>
+        <button class="allProducts">Todos</button>
 
-  <section class="filterButtons">
-    <button class="allProducts">Todos</button>
-    <img src="/images/bread-icon.jpg">
-    <button class="bread">Panificadora</button>
-    <img src="/images/Icon_fruit.png">
-    <button class="fruits">Frutas</button>
-    <img src="/images/red-wine-cartoon.jpg">
-    <button class="drink">Bebidas</button>
-  </section>
-    <div class="add">
-      <button id="modalAddProduct" class="addNewProduct">Adicionar novo produto</button>
+        <button class="bread"><img src="/images/bread.png" />Panificadora</button>
+  
+        <button class="fruits"><img src="/images/fruit.png" />Frutas</button>
+  
+        <button class="drink">
+          <img src="/images/wine-bottle.png" />Bebidas
+        </button>
+      </div>
+      
+      <div id="novoproduto">
+        <button id="modalAddProduct" class="addNewProduct">
+          Adicionar novo produto
+        </button>
+      </div>
+    </section>
+    <div class="add"></div>
       <div id="addModal" class="addProductBackgroundModalStyle">
         <div class="modalAddProduct">
-          <t class="registerProduct">Cadastro de Produto</t>
+          <t class="registerProduct"></t>
           <span id="closeAddModal" class="span">x</span>
           <h5 class="newProduct">Nome do Produto</h5>
           <form class="modalForm" action="">
-            <input type="text" placeHolder="Digitar o nome" class="inputProduct" id="name">
+            <input
+              type="text"
+              placeholder="Digitar o nome"
+              class="inputProduct"
+              id="name"
+            />
           </form>
           <h5 class="newProduct">Descrição</h5>
           <form class="modalForm" action="">
-            <input type="text" placeholder="Digitar a descrição" class="inputProduct" id="description">
+            <input
+              type="text"
+              placeholder="Digitar a descrição"
+              class="inputProduct"
+              id="description"
+            />
           </form>
           <div class="categories">
-          <h5 class="newProduct">Categorias</h5>
-          <div class="categoriesAll">
-            <button id="1"class="categoriesProducts">Panificadora</button>
-            <button id="2"class="categoriesProducts">Frutas</button>
-            <button id="3"class="categoriesProducts">Bebidas</button>
-          </div>
+            <h5 class="newProduct">Categorias</h5>
+            <div class="categoriesAll">
+              <select id="select">
+                <option id="Frutas">Frutas</option>
+                <option id="Panificadora">Panificadora</option>
+                <option id="Bebidas">Bebidas</option>
+              </select>
+            </div>
           </div>
           <h5 class="newProduct">Valor do Produto</h5>
           <form class="modalForm" action="">
-            <input type="text" placeholder="Digitar o valor aqui" class="inputProduct" id="pricess">
+            <input
+              type="text"
+              placeholder="Digitar o valor aqui"
+              class="inputProduct"
+              id="pricess"
+            />
           </form>
           <h5 class="newProduct">Link da imagem</h5>
           <form class="modalForm" action="">
-            <input type="text" placeholder="Inserir link" class="inputProduct" id="link">
+            <input
+              type="text"
+              placeholder="Inserir link"
+              class="inputProduct"
+              id="link"
+            />
           </form>
           <div class="productChange">
-            <button id="accept"class="acceptProduct">Cadastrar produto</button>
+            <button id="accept" class="acceptProduct"></button>
           </div>
+        </div>
       </div>
-      </div>
-    </div> -->
+    </div>
 
+    <div class="subTitle">
+      <!-- <h3>Produto</h3>
+      <h3>Categorias</h3>
+      <h3>Descrição</h3>  
+      <h3>Preço</h3>
+      <h3>Ações</h3> -->
+    </div>
 
+    <main>
+      <ul id="productsList"></ul>
+    </main>
 
-   <div class="subTitle">
-     <h3>Produto</h3>
-     <h3>Categorias</h3>
-     <h3>Descrição</h3>
-     <h3>Ações</h3>
-   </div>
-
-   <main>
-     <ul id="productsList">
-
-     </ul>
-   </main>
-
-  <script type="module" src="../scripts/dashboard.js"></script>
-  <script type="module" src="../scripts/models/my-products.js"></script>
-  <script type="module" src="../scripts/models/create-product.js"></script>
-</body>
+    <script type="module" src="../scripts/dashboard.js"></script>
+    <script type="module" src="../scripts/models/my-products.js"></script>
+    <script type="module" src="../scripts/models/create-product.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
 </html>
